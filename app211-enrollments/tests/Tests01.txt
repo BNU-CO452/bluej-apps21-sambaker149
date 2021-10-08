@@ -1,0 +1,17 @@
+ Course web = new Course("BT1CWD", "BSc (Hons) Computing and Web Development");
+web.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CWD: BSc (Hons) Computing and Web Development
+
+Student samuelBaker = new Student("Samuel Baker", 22135877);
+samuelBaker.enrol(web);
+samuelBaker.printCourse();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CWD: BSc (Hons) Computing and Web Development
+
