@@ -1,6 +1,6 @@
 
 /**
- * This class contains information relating to moddules on courses.
+ * This class contains information relating to modules on a course.
  *
  * @author Samuel Baker
  * @version 11/10/2021
@@ -13,7 +13,7 @@ public class Module
     private int credit;
     
     /**
-     * Create a new module, including module code and title.
+     * Constructor for objects of class Module
      */
     public Module(String code, String title)
     {
@@ -24,40 +24,29 @@ public class Module
     }
 
     /**
-     * Return the Module Code.
+     * Method to get the Module Code
      *
      * @param  
      * @return code
      */
     public String getCode()
     {
-        return this.code;
+        return code;
     }
 
     /**
-     * Return the Module Title.
+     * Method to get the Module Title
      *
      * @param  
      * @return title
      */
     public String getTitle()
     {
-        return this.title;
+        return title;
     }
     
     /**
-     * Return the Module credit.
-     *
-     * @param  
-     * @return credit
-     */
-    public int getCredit()
-    {
-        return this.credit;
-    }
-    
-    /**
-     * Set the module credit.
+     * Method to set the Module Credit
      *
      * @param  
      * @set credit
@@ -68,10 +57,12 @@ public class Module
     }
     
     /**
-     * Print the module code and title.
+     * Method to print the details of the module
      */
     public void print()
     {
-        System.out.println(" Module Code: " + code + ": " + title);
+        System.out.println(" Module Code: " + code + ": " + title + 
+        " credit " + credit);
+        System.out.println();
     }
 }

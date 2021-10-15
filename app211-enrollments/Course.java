@@ -13,7 +13,7 @@ public class Course
     private String code;
     // The full title including qualification and subject
     private String title;
-    
+    // The details of the module within the course
     private Module module;
     
     /**
@@ -37,6 +37,8 @@ public class Course
         
         System.out.println(" Course Code: " + code + ": " + title);
         System.out.println();
+        
+        module.print();
     }
     
     /**
@@ -48,5 +50,10 @@ public class Course
         System.out.println("   App211: Course Details");
         System.out.println(" --------------------------------");
         System.out.println();
+    }
+    
+    public void assignModule(Module module)
+    {
+        this.module = module;
     }
 }
