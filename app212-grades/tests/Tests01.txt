@@ -1,0 +1,29 @@
+ Student samuelBaker = new Student("Samuel Baker", 22135877);
+Course web = new Course("BT1CWD1", "BSc (Hons) Computing and Web Development");
+samuelBaker.enrol(web);
+samuelBaker.printCourse();
+ Student ID: 22135877, Samuel Baker
+
+ Course BT1CWD1: BSc (Hons) Computing and Web Development
+Module co452 = new Module("CO452", "Programming Concepts");
+web.addModule(co452);
+ModuleMark samuelBaker_co452Mark = new ModuleMark(co452);
+samuelBaker_co452Mark.setMark(85);
+samuelBaker.addMark(samuelBaker_co452Mark);
+samuelBaker.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by Samuel Baker
+ ------------------------------------
+ Student ID: 22135877, Samuel Baker
+
+ Course BT1CWD1: BSc (Hons) Computing and Web Development
+
+ CO452: 	Programming Concepts	  15 credits
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+
+ No Final Course Grade Yet!

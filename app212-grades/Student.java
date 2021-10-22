@@ -24,7 +24,7 @@ public class Student
      */
     public Student()
     {
-        this("Derek", 12345678);
+        this("Samuel Baker", 22135877);
     }
     
     /**
@@ -104,14 +104,17 @@ public class Student
     
     private void printModules()
     {
-
+       for(ModuleMark moduleMark: marks)
+       {
+           moduleMark.print();
+       }
     }
     
     public void printTranscript()
     {
         System.out.println(" ------------------------------------");
         System.out.println(" App21-02: Exam Board Transcript 2021");
-        System.out.println("        by student name");
+        System.out.println("        by Samuel Baker");
         System.out.println(" ------------------------------------");
         
         printCourse();
