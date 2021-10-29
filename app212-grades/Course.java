@@ -50,7 +50,7 @@ public class Course
         addModule(moduleCO452);
         Module moduleCO450 = new Module("CO450", "Computer Architectures");
         addModule(moduleCO450);
-        Module moduleCO454 = new Module("CO454", "Digital Technologies and Professional Practice");
+        Module moduleCO454 = new Module("CO454", "Digi-Tech");
         addModule(moduleCO454);
         Module moduleCO456 = new Module("CO456", "Web Development");
         addModule(moduleCO456);
@@ -69,28 +69,28 @@ public class Course
      */
     public Grades convertToGrade(int mark)
     {
-        Grades grade = Grades.NS;
-        if(mark > Grades.B.getValue())
+        if (mark >= 0 && mark <= 39)
         {
-            return Grades.A;
+            return Grades.F;
         }
-        else if(mark > Grades.C.getValue())
-        {
-            return Grades.B;
-        }
-        else if(mark > Grades.D.getValue())
-        {
-            return Grades.C;
-        }
-        else if(mark > Grades.F.getValue())
+        else if(mark <= 49)
         {
             return Grades.D;
         }
-        else if(mark < Grades.F.getValue())
+        else if(mark <= 59)
         {
-            return Grades.NS;
+            return Grades.C;
         }
-        return Grades.NS;
+        else if(mark <= 69)
+        {
+            return Grades.B;
+        }
+        else if(mark <= 100)
+        {
+            return Grades.A;
+        }
+        else
+            return Grades.NS;
     }
     
     /**
@@ -99,7 +99,18 @@ public class Course
      */
     public Grades calculateGrade(ArrayList<ModuleMark> marks)
     {
-        return Grades.NS;
+        int total = 0;
+        int finalMark = 0;
+        
+         for(ModuleMark mark : marks)
+        {
+            total = total + mark.getValue();
+        }
+        
+        finalMark = total / MAXN_MODULES;
+        finalGrade = convertToGrade(finalMark);
+        
+        return finalGrade;
     }
     
     /**

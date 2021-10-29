@@ -55,11 +55,13 @@ public class Student
             ModuleMark mark = new ModuleMark(module);
             mark.setMark(value);
             
+            marks.add(mark);
+            
             value = value - 10;
         }
     }
     
-     /**
+    /**
      * Find the module by the moduleCode and
      * set its mark to the value
      */
@@ -102,7 +104,6 @@ public class Student
         return id;
     }
 
-        
     /**
      * Print the student's name and ID number to the 
      * output terminal.
@@ -120,7 +121,13 @@ public class Student
     
     public void printModules()
     {
-        System.out.println();
+        for(ModuleMark mark : marks)
+        {
+            System.out.print("    " + mark.getModule().getCode());
+            System.out.print("    " + mark.getModule().getTitle());
+            System.out.print("    " + mark.getCredit());
+            System.out.print("    "+ mark.getValue());
+        }
     }
     
     public void printTranscript()
@@ -138,7 +145,8 @@ public class Student
         System.out.println(" Code \t Module \t\tCredit\t Mark \t Grade");
         System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
         
-       
+        printModules();
+        
         Grades finalGrade = course.calculateGrade(marks);
         
         System.out.println();

@@ -33,7 +33,7 @@ public class Module
     {
         return title;
     }
-    
+ 
     /**
      * Print out the code and title of this module
      * but stay on the same line so that credits
