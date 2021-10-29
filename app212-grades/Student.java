@@ -85,7 +85,6 @@ public class Student
      */
     public void awardTestMarks()
     {
-        
     }
     
     /**
@@ -123,10 +122,12 @@ public class Student
     {
         for(ModuleMark mark : marks)
         {
-            System.out.print("    " + mark.getModule().getCode());
-            System.out.print("    " + mark.getModule().getTitle());
-            System.out.print("    " + mark.getCredit());
-            System.out.print("    "+ mark.getValue());
+            System.out.print(" " + mark.getModule().getCode());
+            System.out.print("\t " + mark.getModule().getTitle());
+            System.out.print("\t   " + mark.getCredit());
+            System.out.print("\t  " + mark.getValue());
+            System.out.print("\t   " + course.convertToGrade(mark.getValue()));
+            System.out.println();
         }
     }
     

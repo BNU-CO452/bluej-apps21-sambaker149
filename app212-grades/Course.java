@@ -50,7 +50,7 @@ public class Course
         addModule(moduleCO452);
         Module moduleCO450 = new Module("CO450", "Computer Architectures");
         addModule(moduleCO450);
-        Module moduleCO454 = new Module("CO454", "Digi-Tech");
+        Module moduleCO454 = new Module("CO454", "Digital Technologies");
         addModule(moduleCO454);
         Module moduleCO456 = new Module("CO456", "Web Development");
         addModule(moduleCO456);
@@ -65,7 +65,7 @@ public class Course
     }
     
     /**
-     * 
+     * Method to initialise the boundaries for conversion of marks into a grade
      */
     public Grades convertToGrade(int mark)
     {
