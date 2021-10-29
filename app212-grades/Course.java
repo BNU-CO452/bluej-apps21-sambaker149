@@ -16,7 +16,10 @@ public class Course
     private String title;
     
     private Grades finalGrade;
-     
+    
+    /**
+     * Constructor to create a course with set course code and title
+     */
     public Course()
     {
         this("BT1CWD1", "BSc (Hons) Computing and Web Development");
@@ -43,7 +46,14 @@ public class Course
      */
     public void createModules()
     {
-
+        Module moduleCO452 = new Module("CO452", "Programming Concepts");
+        addModule(moduleCO452);
+        Module moduleCO450 = new Module("CO450", "Computer Architectures");
+        addModule(moduleCO450);
+        Module moduleCO454 = new Module("CO454", "Digital Technologies and Professional Practice");
+        addModule(moduleCO454);
+        Module moduleCO456 = new Module("CO456", "Web Development");
+        addModule(moduleCO456);
     }
     
     public void addModule(Module module)
@@ -59,6 +69,27 @@ public class Course
      */
     public Grades convertToGrade(int mark)
     {
+        Grades grade = Grades.NS;
+        if(mark > Grades.B.getValue())
+        {
+            return Grades.A;
+        }
+        else if(mark > Grades.C.getValue())
+        {
+            return Grades.B;
+        }
+        else if(mark > Grades.D.getValue())
+        {
+            return Grades.C;
+        }
+        else if(mark > Grades.F.getValue())
+        {
+            return Grades.D;
+        }
+        else if(mark < Grades.F.getValue())
+        {
+            return Grades.NS;
+        }
         return Grades.NS;
     }
     
@@ -89,10 +120,13 @@ public class Course
      */
     public void printModules()
     {
-        for (Module module : modules)
+       System.out.println("    Course Modules");
+       System.out.println("    --------------"); 
+       System.out.println();
+        for(Module module : modules)
         {
-            module.print();
-            module.printCredit();
+            System.out.print("    " + module.getCode());
+            System.out.println("    " + module.getTitle());
         }
     }
 }
