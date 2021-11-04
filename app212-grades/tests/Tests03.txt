@@ -1,0 +1,129 @@
+Student samuelBaker = new Student();
+Course web = new Course();
+samuelBaker.enrol(web);
+samuelBaker.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by Samuel Baker
+ ------------------------------------
+ Student ID: 22135877, Samuel Baker
+
+ Course BT1CWD1: BSc (Hons) Computing and Web Development
+    Course Modules
+    --------------
+
+    CO452    Programming Concepts
+    CO450    Computer Architectures
+    CO454    Digital Technologies
+    CO456    Web Development
+
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ CO452	 Programming Concepts	   15	  65	   B
+ CO450	 Computer Architectures	   15	  55	   C
+ CO454	 Digital Technologies	   15	  45	   D
+ CO456	 Web Development	   0	  35	   F
+
+
+ Final Course Grade = NS
+Student samuelBaker = new Student();
+Course web = new Course();
+samuelBaker.enrol(web);
+samuelBaker.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by Samuel Baker
+ ------------------------------------
+ Student ID: 22135877, Samuel Baker
+
+ Course BT1CWD1: BSc (Hons) Computing and Web Development
+    Course Modules
+    --------------
+
+    CO452    Programming Concepts
+    CO450    Computer Architectures
+    CO454    Digital Technologies
+    CO456    Web Development
+
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ CO452	 Programming Concepts	   15	  110	   NS
+ CO450	 Computer Architectures	   15	  100	   A
+ CO454	 Digital Technologies	   15	  90	   A
+ CO456	 Web Development	   15	  80	   A
+
+
+ Final Course Grade = A
+Student samuelBaker = new Student();
+Course web = new Course();
+samuelBaker.enrol(web);
+samuelBaker.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by Samuel Baker
+ ------------------------------------
+ Student ID: 22135877, Samuel Baker
+
+ Course BT1CWD1: BSc (Hons) Computing and Web Development
+    Course Modules
+    --------------
+
+    CO452    Programming Concepts
+    CO450    Computer Architectures
+    CO454    Digital Technologies
+    CO456    Web Development
+
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ CO452	 Programming Concepts	   0	  -10	   D
+ CO450	 Computer Architectures	   0	  -20	   D
+ CO454	 Digital Technologies	   0	  -30	   D
+ CO456	 Web Development	   0	  -40	   D
+
+
+ Final Course Grade = D
+Module co453 = new Module("CO453", "Application Programming");
+web.addModule(co453);
+web.print();
+
+ Course BT1CWD1: BSc (Hons) Computing and Web Development
+    Course Modules
+    --------------
+
+    CO452    Programming Concepts
+    CO450    Computer Architectures
+    CO454    Digital Technologies
+    CO456    Web Development
+samuelBaker.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by Samuel Baker
+ ------------------------------------
+ Student ID: 22135877, Samuel Baker
+
+ Course BT1CWD1: BSc (Hons) Computing and Web Development
+    Course Modules
+    --------------
+
+    CO452    Programming Concepts
+    CO450    Computer Architectures
+    CO454    Digital Technologies
+    CO456    Web Development
+
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ CO452	 Programming Concepts	   0	  -10	   D
+ CO450	 Computer Architectures	   0	  -20	   D
+ CO454	 Digital Technologies	   0	  -30	   D
+ CO456	 Web Development	   0	  -40	   D
+
+
+ Final Course Grade = D

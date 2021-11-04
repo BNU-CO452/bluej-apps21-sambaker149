@@ -11,6 +11,7 @@ public class Course
     public final static int MAXN_MODULES = 4;
     
     public ArrayList<Module> modules;
+    public ArrayList<Student> students;
     
     private String code;
     private String title;
@@ -35,8 +36,10 @@ public class Course
         this.title = title;
         
         modules  = new ArrayList<Module>();
+        students = new ArrayList<Student>();
         
         createModules();
+        createStudents();
     }
 
     /**
@@ -62,6 +65,26 @@ public class Course
         {
             modules.add(module);
         }
+    }
+    
+     /**
+     * Constructor for initialisation of list of students enrolled on a course.
+     */
+    public void createStudents()
+    {
+        Student student_samuelBaker = new Student("Samuel Baker", 22135877);
+        addStudent(student_samuelBaker);
+        Student student_joeCollins = new Student("Joe Collins", 23467452);
+        addStudent(student_joeCollins);
+        Student student_aliPhillips = new Student("Ali Phillips", 23467453);
+        addStudent(student_aliPhillips);
+        Student student_thomasHoward = new Student("Thomas Howard", 23467454);
+        addStudent(student_thomasHoward);
+    }
+    
+    public void addStudent (Student student)
+    {
+        students.add(student);
     }
     
     /**
@@ -111,6 +134,18 @@ public class Course
         finalGrade = convertToGrade(finalMark);
         
         return finalGrade;
+    }
+    
+     /**
+     * Method to print the list of all students enrolled on a course
+     */
+    public void printStudents()
+    {
+        for(Student student : students)
+        {
+            System.out.print("    " + student.getName());
+            System.out.println("    " + student.getID());
+        }
     }
     
     /**
