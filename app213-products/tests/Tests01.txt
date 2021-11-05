@@ -1,0 +1,24 @@
+ Product iphoneXR = new Product(100, "Apple iPhone XR");
+iphoneXR.print();
+ ID 100: Apple iPhone XR stock level: 0
+iphoneXR.decreaseQuantity(3);
+iphoneXR.print();
+ ID 100: Apple iPhone XR stock level: 0
+iphoneXR.increaseQuantity(5);
+iphoneXR.print();
+ ID 100: Apple iPhone XR stock level: 5
+iphoneXR.decreaseQuantity(2);
+iphoneXR.print();
+ ID 100: Apple iPhone XR stock level: 3
+Product galaxyS20 = new Product(101, "Samsung Galaxy S20");
+StockList stockLis1 = new StockList();
+stockLis1.add(iphoneXR);
+stockLis1.add(galaxyS20);
+stockLis1.print();
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 3
+ ID 101: Samsung Galaxy S20 stock level: 0
+
