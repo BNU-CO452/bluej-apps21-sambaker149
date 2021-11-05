@@ -59,11 +59,29 @@ public class StockDemo
     
     private void buyProducts()
     {
-        stock.buyProduct(100, 10);
+        stock.buyProduct(100, 100);
+        stock.buyProduct(101, 250);
+        stock.buyProduct(102, 99);
+        stock.buyProduct(103, 375); 
+        stock.buyProduct(104, 100);
+        stock.buyProduct(105, 50);
+        stock.buyProduct(106, 200);
+        stock.buyProduct(107, 625);
+        stock.buyProduct(108, 700);
+        stock.buyProduct(109, 550);
     }
 
-    private void sellProducts()
+     private void sellProducts()
     {
-        stock.sellProduct(103, 2);
+        stock.sellProduct(99, 50);
+        stock.sellProduct(101, 300);
+        stock.sellProduct(102, 25);
+        stock.sellProduct(103, 300);
+        stock.sellProduct(104, 150);
+        stock.sellProduct(105, 25);
+        stock.sellProduct(106, 100);
+        stock.sellProduct(107, 500);
+        stock.sellProduct(108, 250);
+        stock.sellProduct(109, 475);
     }    
 }
