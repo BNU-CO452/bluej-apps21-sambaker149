@@ -66,7 +66,7 @@ public class StockDemo
             }
             else
             {
-                quantity = generator.nextInt(20);
+                quantity = generator.nextInt(250);
                 stock.buyProduct(id, quantity);
             }
         }
@@ -74,15 +74,20 @@ public class StockDemo
     
     private void sellProducts()
     {
-        stock.sellProduct(99, 50);
-        stock.sellProduct(101, 300);
-        stock.sellProduct(102, 25);
-        stock.sellProduct(103, 300);
-        stock.sellProduct(104, 150);
-        stock.sellProduct(105, 25);
-        stock.sellProduct(106, 100);
-        stock.sellProduct(107, 500);
-        stock.sellProduct(108, 250);
-        stock.sellProduct(109, 475);
+        Product product;
+        int quantity = 1;
+        for(int id = 100; id <= 109; id++)
+        {
+            product = stock.findProduct(id);
+            if(product == null)
+            {
+                System.out.println("Product " + id + " Not Found" );
+            }
+            else
+            {
+                quantity = generator.nextInt(250);
+                stock.sellProduct(id, quantity);
+            }
+        }
     }    
 }

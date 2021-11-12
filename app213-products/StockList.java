@@ -24,9 +24,15 @@ public class StockList
      * Add a product to the list.
      * @param item The product item to be added.
      */
-    public void add(Product item)
+    public void add()
     {
-        stock.add(item);
+    }
+    
+    /**
+     *  A method to remove a product from the list
+     */
+        public void remove()
+    {
     }
     
     /**
@@ -36,7 +42,7 @@ public class StockList
     {
         buyProduct(productID, 1);
     }
-    
+      
     
     /**
      * Buy a quantity of a particular product.
