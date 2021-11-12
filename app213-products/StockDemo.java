@@ -1,27 +1,25 @@
-
+import java.util.Random;
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
  * 
  * @author David J. Barnes and Michael Kölling.
+ * @modified Samuel Baker
  * @version 2016.02.29
  */
 public class StockDemo
 {
-    // The stock manager.
     private StockList stock;
+    private Random generator = new Random();
 
-    /**
+     /**
      * Create a StockManager and populate it with at least
      * 10 sample products.
      */
     public StockDemo()
     {
         this.stock = new StockList();
-        
-        // Add at least 10 products, they must be unique to you
-        // Make sure the ids are sequential numbers
         
         stock.add(new Product(100, "Apple iPhone XR"));
         stock.add(new Product(101, "Samsung Galaxy S20"));
@@ -46,8 +44,6 @@ public class StockDemo
      */
     public void runDemo()
     {
-        // Show details of all of the products before delivery.
-        
         stock.print();
 
         buyProducts();
@@ -59,19 +55,24 @@ public class StockDemo
     
     private void buyProducts()
     {
-        stock.buyProduct(100, 100);
-        stock.buyProduct(101, 250);
-        stock.buyProduct(102, 99);
-        stock.buyProduct(103, 375); 
-        stock.buyProduct(104, 100);
-        stock.buyProduct(105, 50);
-        stock.buyProduct(106, 200);
-        stock.buyProduct(107, 625);
-        stock.buyProduct(108, 700);
-        stock.buyProduct(109, 550);
+        Product product;
+        int quantity = 1;
+        for(int id = 100; id <= 109; id++)
+        {
+            product = stock.findProduct(id);
+            if(product == null)
+            {
+                System.out.println("Product " + id + " Not Found" );
+            }
+            else
+            {
+                quantity = generator.nextInt(20);
+                stock.buyProduct(id, quantity);
+            }
+        }
     }
-
-     private void sellProducts()
+    
+    private void sellProducts()
     {
         stock.sellProduct(99, 50);
         stock.sellProduct(101, 300);

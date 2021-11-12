@@ -38,7 +38,7 @@ public class StockList
     }
     
     
-     /**
+    /**
      * Buy a quantity of a particular product.
      * Increase the quantity of the product by the given amount.
      * @param id The ID of the product.
@@ -47,7 +47,7 @@ public class StockList
     public void buyProduct(int productID, int amount)
     {
         Product product = findProduct(productID);
-        if(product != null) 
+        if(product != null)
         {
             if(product.getQuantity() <= 1000)
             {
