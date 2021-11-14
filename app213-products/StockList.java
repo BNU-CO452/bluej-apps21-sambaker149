@@ -24,15 +24,25 @@ public class StockList
      * Add a product to the list.
      * @param item The product item to be added.
      */
-    public void add()
+    public void add(Product item)
     {
+        stock.add(item);
     }
     
     /**
      *  A method to remove a product from the list
      */
-        public void remove()
+        public void remove(int productID)
     {
+        Product product = findProduct(productID);
+        if(product != null)
+        {
+            stock.remove(product);
+        }
+        else
+        {
+            System.out.println("Couldn't find product");
+        }
     }
     
     /**
@@ -134,6 +144,39 @@ public class StockList
         }
     }    
 
+    /**
+     * A method to list products starting with a certain phrase symbolising
+     * phone manufacturer
+     */
+     public void search(String phrase)
+    {
+        if(phrase.contains("Apple"))
+        {
+        }
+        else if(phrase.contains("Samsung"))
+        {
+        }
+        else if(phrase.contains("Google"))
+        {
+        }
+    }     
+    
+    /**
+     * A method to list all products that fall below a set quantity
+     * for stock level 
+     */
+    public void search()
+    {
+        for(Product product : stock)
+        {
+            if(product.getQuantity() >= 0 && product.getQuantity() < 25)
+            {
+                System.out.println("ID "+product.getID()+" "+
+                product.getName()+" stock level: "+product.getQuantity());
+            }
+        }
+        System.out.println();
+    }
     
     /**
      * Locate a product with the given ID, and return how
@@ -144,7 +187,16 @@ public class StockList
      */
     public int numberInStock(int productID)
     {
-        return 0;
+        Product product = findProduct(productID);
+        if(product.getID() == productID)
+        {
+            System.out.println(product.getQuantity());
+        } 
+        else
+        {
+            System.out.println("Couldn't find product");
+        }
+        return product.getQuantity();
     }
 
     /**

@@ -17,9 +17,9 @@ public class StockDemo
      * Create a StockManager and populate it with at least
      * 10 sample products.
      */
-    public StockDemo()
+    public StockDemo(StockList stock)
     {
-        this.stock = new StockList();
+        this.stock = stock;
         
         stock.add(new Product(100, "Apple iPhone XR"));
         stock.add(new Product(101, "Samsung Galaxy S20"));
@@ -53,6 +53,10 @@ public class StockDemo
         stock.print();        
     }
     
+    /**
+     * A method to buy different quantities of each product within the stock
+     * list
+     */
     private void buyProducts()
     {
         Product product;
@@ -72,6 +76,10 @@ public class StockDemo
         }
     }
     
+    /**
+     * A method to sell different quantities of each product within the stock
+     * list
+     */
     private void sellProducts()
     {
         Product product;
