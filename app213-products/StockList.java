@@ -144,6 +144,18 @@ public class StockList
         }
     }    
 
+    public void buyProduct()
+    {
+        for(Product product : stock)
+        if(product != null)
+        {
+            if(product.getQuantity() < 25)
+            {
+                product.increaseQuantity(50);
+            }
+        }
+    }
+    
     /**
      * A method to print a list of all the products containing a certain 
      * phrase, such as manufacturer
