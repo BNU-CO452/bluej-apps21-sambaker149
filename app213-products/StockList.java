@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * The stock is described by zero or more Products.
  * 
  * @author Samuel Baker 
- * @version 05/11/2021
+ * @version 15/11/2021
  */
 public class StockList
 {
@@ -145,23 +145,23 @@ public class StockList
     }    
 
     /**
-     * A method to list products starting with a certain phrase symbolising
-     * phone manufacturer
+     * A method to print a list of all the products containing a certain 
+     * phrase, such as manufacturer
      */
-     public void search(String phrase)
-    {
-        if(phrase.contains("Apple"))
+    public void search(String phrase)
+    {  
+        for(Product product : stock)
         {
-        }
-        else if(phrase.contains("Samsung"))
-        {
-        }
-        else if(phrase.contains("Google"))
-        {
-        }
-    }     
+            String str = product.getName();  
+            if(str.contains("Apple"))
+            {
+                System.out.println(" ID "+product.getID()+" "+
+                product.getName()+" stock level: "+product.getQuantity());
+            }
+        }  
+    }  
     
-    /**
+     /**
      * A method to list all products that fall below a set quantity
      * for stock level 
      */
@@ -171,7 +171,7 @@ public class StockList
         {
             if(product.getQuantity() >= 0 && product.getQuantity() < 25)
             {
-                System.out.println("ID "+product.getID()+" "+
+                System.out.println(" ID "+product.getID()+" "+
                 product.getName()+" stock level: "+product.getQuantity());
             }
         }

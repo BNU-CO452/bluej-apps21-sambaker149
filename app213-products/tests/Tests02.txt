@@ -1,0 +1,93 @@
+StockList stockLis1 = new StockList();
+StockDemo samStockDemo = new StockDemo(stockLis1);
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 0
+ ID 101: Samsung Galaxy S20 stock level: 0
+ ID 102: Google Pixel 5 stock level: 0
+ ID 103: Samsung Galaxy A22 stock level: 0
+ ID 104: Apple iPhone XS stock level: 0
+ ID 105: Apple iPhone 13 stock level: 0
+ ID 106: Samsung Galaxy A51 stock level: 0
+ ID 107: Google Pixel 4A stock level: 0
+ ID 108: Apple iPhone 11 stock level: 0
+ ID 109: Google Pixel 3A stock level: 0
+
+Bought 123 of Apple iPhone XR
+Bought 27 of Samsung Galaxy S20
+Bought 238 of Google Pixel 5
+Bought 240 of Samsung Galaxy A22
+Bought 119 of Apple iPhone XS
+Bought 106 of Apple iPhone 13
+Bought 216 of Samsung Galaxy A51
+Bought 175 of Google Pixel 4A
+Bought 222 of Apple iPhone 11
+Bought 46 of Google Pixel 3A
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 123
+ ID 101: Samsung Galaxy S20 stock level: 27
+ ID 102: Google Pixel 5 stock level: 238
+ ID 103: Samsung Galaxy A22 stock level: 240
+ ID 104: Apple iPhone XS stock level: 119
+ ID 105: Apple iPhone 13 stock level: 106
+ ID 106: Samsung Galaxy A51 stock level: 216
+ ID 107: Google Pixel 4A stock level: 175
+ ID 108: Apple iPhone 11 stock level: 222
+ ID 109: Google Pixel 3A stock level: 46
+
+Unable to sell 184 of Apple iPhone XR due to only 123 being in stock
+Unable to sell 85 of Samsung Galaxy S20 due to only 27 being in stock
+Sold 202 of Google Pixel 5
+Sold 219 of Samsung Galaxy A22
+Unable to sell 214 of Apple iPhone XS due to only 119 being in stock
+Unable to sell 177 of Apple iPhone 13 due to only 106 being in stock
+Sold 86 of Samsung Galaxy A51
+Sold 155 of Google Pixel 4A
+Unable to sell 234 of Apple iPhone 11 due to only 222 being in stock
+Unable to sell 144 of Google Pixel 3A due to only 46 being in stock
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 123
+ ID 101: Samsung Galaxy S20 stock level: 27
+ ID 102: Google Pixel 5 stock level: 36
+ ID 103: Samsung Galaxy A22 stock level: 21
+ ID 104: Apple iPhone XS stock level: 119
+ ID 105: Apple iPhone 13 stock level: 106
+ ID 106: Samsung Galaxy A51 stock level: 130
+ ID 107: Google Pixel 4A stock level: 20
+ ID 108: Apple iPhone 11 stock level: 222
+ ID 109: Google Pixel 3A stock level: 46
+
+stockLis1.remove(106);
+stockLis1.print();
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 123
+ ID 101: Samsung Galaxy S20 stock level: 27
+ ID 102: Google Pixel 5 stock level: 36
+ ID 103: Samsung Galaxy A22 stock level: 21
+ ID 104: Apple iPhone XS stock level: 119
+ ID 105: Apple iPhone 13 stock level: 106
+ ID 107: Google Pixel 4A stock level: 20
+ ID 108: Apple iPhone 11 stock level: 222
+ ID 109: Google Pixel 3A stock level: 46
+
+stockLis1.search("Apple");
+ ID 100 Apple iPhone XR stock level: 123
+ ID 104 Apple iPhone XS stock level: 119
+ ID 105 Apple iPhone 13 stock level: 106
+ ID 108 Apple iPhone 11 stock level: 222
+
+stockLis1.search();
+ ID 103 Samsung Galaxy A22 stock level: 21
+ ID 107 Google Pixel 4A stock level: 20
+
