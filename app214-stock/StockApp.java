@@ -43,6 +43,10 @@ public class StockApp
         }
     }
     
+    /**
+     * A method to initiate the methods that occur in the event of certain
+     * selection being made by the user
+     */
     private boolean executeChoice(String choice)
     {
         if(choice.equals("add"))
@@ -61,6 +65,10 @@ public class StockApp
         {
             sellProduct();
         }
+        else if(choice.equals("restock"))
+        {
+            restockProduct();
+        }
         else if(choice.equals("print"))
         {
             stock.print();
@@ -72,6 +80,10 @@ public class StockApp
         return false;
     }
    
+    /**
+     * A method to add a product to the the stocklist, intitialised by
+     * the executeChoice method
+     */
     public void addProduct()
     {
         System.out.println("Adding a New Product");
@@ -83,8 +95,14 @@ public class StockApp
         Product product = new Product (id, name);
         stock.add(product);
         stock.print();
+        System.out.println("Added product ID "+product.getID()+": " +
+        product.getName()+" to stock list");
     }
     
+    /**
+     * A method to remove a product from the the stocklist, intitialised by
+     * the executeChoice method
+     */
     public void removeProduct()
     {
         System.out.println("Removing a Product");
@@ -95,8 +113,14 @@ public class StockApp
         Product product = stock.findProduct(id);
         stock.remove(product);
         stock.print();
+        System.out.println("Removed product ID "+product.getID()+": " +
+        product.getName()+" from stock list");
     }
     
+    /**
+     * A method to buy different quantities of a product, intitialised by
+     * the executeChoice method
+     */
     public void buyProduct()
     {
         System.out.println("Buying a Product");
@@ -109,8 +133,14 @@ public class StockApp
         Product product = stock.findProduct(id);
         stock.buyProduct(id, amount);
         stock.print();
+        System.out.println("Bought "+amount+" of ID "+product.getID()+": "+
+        product.getName());
     }
     
+    /**
+     * A method to sell different quantities of a product, intitialised by
+     * the executeChoice method
+     */
     public void sellProduct()
     {
         System.out.println("Selling a Product");
@@ -123,6 +153,27 @@ public class StockApp
         Product product = stock.findProduct(id);
         stock.sellProduct(id, amount);
         stock.print();
+        System.out.println("Sold "+amount+" of ID "+product.getID()+": "+
+        product.getName());
+    }
+    
+    /**
+     * 
+     */
+    public void search (String phrase)
+    {
+    }  
+  
+    /**
+     * A method to restock a product by a set amount based on ID
+     */
+    public void restockProduct()
+    {
+        int id = reader.getInt("Please Enter a Product ID > ");
+        Product product = stock.findProduct(id);
+        product.increaseQuantity(75);
+        System.out.println("Restocked ID: "+product.getID()+" "+
+        product.getName());
     }
     
     /**
@@ -135,6 +186,7 @@ public class StockApp
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    Buy:        Buy a product");
         System.out.println("    Sell:       Sell a product");
+        System.out.println("    Restock:    Restock a product");
         System.out.println("    Print:      Print all products");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
