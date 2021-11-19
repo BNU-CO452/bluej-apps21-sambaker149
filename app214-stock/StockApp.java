@@ -45,23 +45,34 @@ public class StockApp
     
     private boolean executeChoice(String choice)
     {
-        if(choice.equals("quit"))
+        if(choice.equals("add"))
         {
-            return true;
+            addProduct();
+        }
+        else if(choice.equals("remove"))
+        {
+            removeProduct();
+        }
+        else if (choice.equals("buy"))
+        {
+            buyProduct();
+        }
+        else if (choice.equals("sell"))
+        {
+            sellProduct();
         }
         else if(choice.equals("print"))
         {
             stock.print();
         }
-        else if (choice.equals("add"))
+        else if(choice.equals("quit"))
         {
-            addProduct();
+            return true;
         }
-        
         return false;
     }
    
-    private void addProduct()
+    public void addProduct()
     {
         System.out.println("Adding a New Product");
         System.out.println();
@@ -74,6 +85,46 @@ public class StockApp
         stock.print();
     }
     
+    public void removeProduct()
+    {
+        System.out.println("Removing a Product");
+        System.out.println();
+        
+        int id = reader.getInt("Please Enter a Product ID > ");
+        
+        Product product = stock.findProduct(id);
+        stock.remove(product);
+        stock.print();
+    }
+    
+    public void buyProduct()
+    {
+        System.out.println("Buying a Product");
+        System.out.println();
+        
+        int id = reader.getInt("Please Enter a Product ID > ");
+        int amount = reader.getInt(
+        "Please Enter the Amount to be Bought > ");
+        
+        Product product = stock.findProduct(id);
+        stock.buyProduct(id, amount);
+        stock.print();
+    }
+    
+    public void sellProduct()
+    {
+        System.out.println("Selling a Product");
+        System.out.println();
+        
+        int id = reader.getInt("Please Enter a Product ID > ");
+        int amount = reader.getInt(
+        "Please Enter the Amount to be Sold > ");
+        
+        Product product = stock.findProduct(id);
+        stock.sellProduct(id, amount);
+        stock.print();
+    }
+    
     /**
      * Print out a menu of operation choices
      */
@@ -82,6 +133,8 @@ public class StockApp
         System.out.println();
         System.out.println("    Add:        Add a new product");
         System.out.println("    Remove:     Remove an old product");
+        System.out.println("    Buy:        Buy a product");
+        System.out.println("    Sell:       Sell a product");
         System.out.println("    Print:      Print all products");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        

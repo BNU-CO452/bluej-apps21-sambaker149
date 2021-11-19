@@ -24,15 +24,17 @@ public class StockList
      * Add a product to the list.
      * @param item The product item to be added.
      */
-    public void add()
+    public void add(Product product)
     {
+       stock.add(product);
     }
     
     /**
      *  A method to remove a product from the list
      */
-        public void remove()
+        public void remove(Product product)
     {
+        stock.remove(product);
     }
     
     /**

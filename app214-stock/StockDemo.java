@@ -17,10 +17,10 @@ public class StockDemo
      * Create a StockManager and populate it with at least
      * 10 sample products.
      */
-    public StockDemo()
+    public StockDemo(StockList stock)
     {
-        this.stock = new StockList();
-        
+        this.stock = stock;
+
         stock.add(new Product(100, "Apple iPhone XR"));
         stock.add(new Product(101, "Samsung Galaxy S20"));
         stock.add(new Product(102, "Google Pixel 5"));
@@ -30,8 +30,8 @@ public class StockDemo
         stock.add(new Product(106, "Samsung Galaxy A51"));
         stock.add(new Product(107, "Google Pixel 4A"));
         stock.add(new Product(108, "Apple iPhone 11"));
-        stock.add(new Product(109, "Google Pixel 3A"));        
-        
+        stock.add(new Product(109, "Google Pixel 3A"));                
+
         runDemo();
     }
     
