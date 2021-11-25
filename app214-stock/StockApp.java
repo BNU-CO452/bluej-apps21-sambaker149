@@ -65,6 +65,14 @@ public class StockApp
         {
             sellProduct();
         }
+        else if(choice.equals("low stock"))
+        {
+            
+        }
+        else if(choice.equals("search"))
+        {
+            
+        }
         else if(choice.equals("restock"))
         {
             restockProduct();
@@ -158,11 +166,25 @@ public class StockApp
     }
     
     /**
+     * A method to Search for Products based on a Name or Phrase
+     */
+    public void search()
+    {  
+        System.out.println("Searching for a Product");
+        System.out.println();
+        
+        String name = reader.getString("Please Enter a Search Phrase > ");
+
+    }  
+    
+    /**
      * 
      */
-    public void search (String phrase)
+    public void search(int quantity)
     {
-    }  
+  
+    }
+    
   
     /**
      * A method to restock a product by a set amount based on ID
@@ -186,6 +208,8 @@ public class StockApp
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    Buy:        Buy a product");
         System.out.println("    Sell:       Sell a product");
+        System.out.println("    Search:     Search for products");
+        System.out.println("    Low Stock   Lists all products low in stock");
         System.out.println("    Restock:    Restock a product");
         System.out.println("    Print:      Print all products");
         System.out.println("    Quit:       Quit the program");
