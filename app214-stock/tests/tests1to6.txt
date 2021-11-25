@@ -1,0 +1,292 @@
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 35
+ ID 101: Samsung Galaxy S20 stock level: 79
+ ID 102: Google Pixel 5 stock level: 2
+ ID 103: Samsung Galaxy A22 stock level: 84
+ ID 104: Apple iPhone XS stock level: 101
+ ID 105: Apple iPhone 13 stock level: 19
+ ID 106: Samsung Galaxy A51 stock level: 186
+ ID 107: Google Pixel 4A stock level: 72
+ ID 108: Apple iPhone 11 stock level: 121
+ ID 109: Google Pixel 3A stock level: 102
+
+Unable to sell 163 of Apple iPhone XR due to only 35 being in stock
+Sold 68 of Samsung Galaxy S20
+Unable to sell 215 of Google Pixel 5 due to only 2 being in stock
+Sold 73 of Samsung Galaxy A22
+Unable to sell 230 of Apple iPhone XS due to only 101 being in stock
+Unable to sell 98 of Apple iPhone 13 due to only 19 being in stock
+Unable to sell 216 of Samsung Galaxy A51 due to only 186 being in stock
+Unable to sell 143 of Google Pixel 4A due to only 72 being in stock
+Sold 99 of Apple iPhone 11
+Unable to sell 120 of Google Pixel 3A due to only 102 being in stock
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 35
+ ID 101: Samsung Galaxy S20 stock level: 11
+ ID 102: Google Pixel 5 stock level: 2
+ ID 103: Samsung Galaxy A22 stock level: 11
+ ID 104: Apple iPhone XS stock level: 101
+ ID 105: Apple iPhone 13 stock level: 19
+ ID 106: Samsung Galaxy A51 stock level: 186
+ ID 107: Google Pixel 4A stock level: 72
+ ID 108: Apple iPhone 11 stock level: 22
+ ID 109: Google Pixel 3A stock level: 102
+
+********************************
+  App21-04: Stock Application 
+      by Samuel Baker
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Buy:        Buy a product
+    Sell:       Sell a product
+    Restock:    Restock a product
+    Print:      Print all products
+    Quit:       Quit the program
+
+Please enter your choice > print
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 35
+ ID 101: Samsung Galaxy S20 stock level: 11
+ ID 102: Google Pixel 5 stock level: 2
+ ID 103: Samsung Galaxy A22 stock level: 11
+ ID 104: Apple iPhone XS stock level: 101
+ ID 105: Apple iPhone 13 stock level: 19
+ ID 106: Samsung Galaxy A51 stock level: 186
+ ID 107: Google Pixel 4A stock level: 72
+ ID 108: Apple iPhone 11 stock level: 22
+ ID 109: Google Pixel 3A stock level: 102
+
+********************************
+  App21-04: Stock Application 
+      by Samuel Baker
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Buy:        Buy a product
+    Sell:       Sell a product
+    Restock:    Restock a product
+    Print:      Print all products
+    Quit:       Quit the program
+
+Please enter your choice > quit
+Program.main({ });
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 0
+ ID 101: Samsung Galaxy S20 stock level: 0
+ ID 102: Google Pixel 5 stock level: 0
+ ID 103: Samsung Galaxy A22 stock level: 0
+ ID 104: Apple iPhone XS stock level: 0
+ ID 105: Apple iPhone 13 stock level: 0
+ ID 106: Samsung Galaxy A51 stock level: 0
+ ID 107: Google Pixel 4A stock level: 0
+ ID 108: Apple iPhone 11 stock level: 0
+ ID 109: Google Pixel 3A stock level: 0
+
+Bought 209 of Apple iPhone XR
+Bought 144 of Samsung Galaxy S20
+Bought 233 of Google Pixel 5
+Bought 199 of Samsung Galaxy A22
+Bought 175 of Apple iPhone XS
+Bought 232 of Apple iPhone 13
+Bought 29 of Samsung Galaxy A51
+Bought 130 of Google Pixel 4A
+Bought 86 of Apple iPhone 11
+Bought 97 of Google Pixel 3A
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 209
+ ID 101: Samsung Galaxy S20 stock level: 144
+ ID 102: Google Pixel 5 stock level: 233
+ ID 103: Samsung Galaxy A22 stock level: 199
+ ID 104: Apple iPhone XS stock level: 175
+ ID 105: Apple iPhone 13 stock level: 232
+ ID 106: Samsung Galaxy A51 stock level: 29
+ ID 107: Google Pixel 4A stock level: 130
+ ID 108: Apple iPhone 11 stock level: 86
+ ID 109: Google Pixel 3A stock level: 97
+
+Sold 109 of Apple iPhone XR
+Unable to sell 214 of Samsung Galaxy S20 due to only 144 being in stock
+Sold 0 of Google Pixel 5
+Sold 36 of Samsung Galaxy A22
+Sold 144 of Apple iPhone XS
+Sold 21 of Apple iPhone 13
+Unable to sell 182 of Samsung Galaxy A51 due to only 29 being in stock
+Unable to sell 245 of Google Pixel 4A due to only 130 being in stock
+Unable to sell 144 of Apple iPhone 11 due to only 86 being in stock
+Sold 8 of Google Pixel 3A
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 100
+ ID 101: Samsung Galaxy S20 stock level: 144
+ ID 102: Google Pixel 5 stock level: 233
+ ID 103: Samsung Galaxy A22 stock level: 163
+ ID 104: Apple iPhone XS stock level: 31
+ ID 105: Apple iPhone 13 stock level: 211
+ ID 106: Samsung Galaxy A51 stock level: 29
+ ID 107: Google Pixel 4A stock level: 130
+ ID 108: Apple iPhone 11 stock level: 86
+ ID 109: Google Pixel 3A stock level: 89
+
+********************************
+  App21-04: Stock Application 
+      by Samuel Baker
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Buy:        Buy a product
+    Sell:       Sell a product
+    Restock:    Restock a product
+    Print:      Print all products
+    Quit:       Quit the program
+
+Please enter your choice > add
+Adding a New Product
+
+Please Enter a Product ID > 
+110
+
+Please Enter the Product Name > Apple iPhone X
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 100
+ ID 101: Samsung Galaxy S20 stock level: 144
+ ID 102: Google Pixel 5 stock level: 233
+ ID 103: Samsung Galaxy A22 stock level: 163
+ ID 104: Apple iPhone XS stock level: 31
+ ID 105: Apple iPhone 13 stock level: 211
+ ID 106: Samsung Galaxy A51 stock level: 29
+ ID 107: Google Pixel 4A stock level: 130
+ ID 108: Apple iPhone 11 stock level: 86
+ ID 109: Google Pixel 3A stock level: 89
+ ID 110: Apple iPhone X stock level: 0
+
+Added product ID 110: Apple iPhone X to stock list
+********************************
+  App21-04: Stock Application 
+      by Samuel Baker
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Buy:        Buy a product
+    Sell:       Sell a product
+    Restock:    Restock a product
+    Print:      Print all products
+    Quit:       Quit the program
+
+Please enter your choice > add
+Adding a New Product
+
+Please Enter a Product ID > 
+105
+
+Please Enter the Product Name > Apple iPhone 13
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 100
+ ID 101: Samsung Galaxy S20 stock level: 144
+ ID 102: Google Pixel 5 stock level: 233
+ ID 103: Samsung Galaxy A22 stock level: 163
+ ID 104: Apple iPhone XS stock level: 31
+ ID 105: Apple iPhone 13 stock level: 211
+ ID 106: Samsung Galaxy A51 stock level: 29
+ ID 107: Google Pixel 4A stock level: 130
+ ID 108: Apple iPhone 11 stock level: 86
+ ID 109: Google Pixel 3A stock level: 89
+ ID 110: Apple iPhone X stock level: 0
+ ID 105: Apple iPhone 13 stock level: 0
+
+Added product ID 105: Apple iPhone 13 to stock list
+********************************
+  App21-04: Stock Application 
+      by Samuel Baker
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Buy:        Buy a product
+    Sell:       Sell a product
+    Restock:    Restock a product
+    Print:      Print all products
+    Quit:       Quit the program
+
+Please enter your choice > remove
+Removing a Product
+
+Please Enter a Product ID > 
+107
+
+ Sam's Stock List
+ ====================
+
+ ID 100: Apple iPhone XR stock level: 100
+ ID 101: Samsung Galaxy S20 stock level: 144
+ ID 102: Google Pixel 5 stock level: 233
+ ID 103: Samsung Galaxy A22 stock level: 163
+ ID 104: Apple iPhone XS stock level: 31
+ ID 105: Apple iPhone 13 stock level: 211
+ ID 106: Samsung Galaxy A51 stock level: 29
+ ID 108: Apple iPhone 11 stock level: 86
+ ID 109: Google Pixel 3A stock level: 89
+ ID 110: Apple iPhone X stock level: 0
+ ID 105: Apple iPhone 13 stock level: 0
+
+Removed product ID 107: Google Pixel 4A from stock list
+********************************
+  App21-04: Stock Application 
+      by Samuel Baker
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Buy:        Buy a product
+    Sell:       Sell a product
+    Restock:    Restock a product
+    Print:      Print all products
+    Quit:       Quit the program
+
+Please enter your choice > remove
+Removing a Product
+
+Please Enter a Product ID > 
+112
+
+ Sam's Stock List
+ ====================
+
+    Exception occurred.
+ ID 100: Apple iPhone XR stock level: 100
+ ID 101: Samsung Galaxy S20 stock level: 144
+ ID 102: Google Pixel 5 stock level: 233
+ ID 103: Samsung Galaxy A22 stock level: 163
+ ID 104: Apple iPhone XS stock level: 31
+ ID 105: Apple iPhone 13 stock level: 211
+ ID 106: Samsung Galaxy A51 stock level: 29
+ ID 108: Apple iPhone 11 stock level: 86
+ ID 109: Google Pixel 3A stock level: 89
+ ID 110: Apple iPhone X stock level: 0
+ ID 105: Apple iPhone 13 stock level: 0
