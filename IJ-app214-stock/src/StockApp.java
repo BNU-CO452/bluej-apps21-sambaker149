@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * This app provides a user interface to the
@@ -11,7 +12,7 @@ public class StockApp
 {
     private InputReader reader;
     
-    private StockList stock;
+    public StockList stock;
     
     /**
      * Constructor for objects of class StockApp
@@ -67,11 +68,11 @@ public class StockApp
         }
         else if(choice.equals("low stock"))
         {
-            
+            searchLowStock();
         }
         else if(choice.equals("search"))
         {
-            
+            searchByPhrase();
         }
         else if(choice.equals("restock"))
         {
@@ -168,21 +169,21 @@ public class StockApp
     /**
      * A method to Search for Products based on a Name or Phrase
      */
-    public void search()
-    {  
-        System.out.println("Searching for a Product");
-        System.out.println();
-        
-        String name = reader.getString("Please Enter a Search Phrase > ");
-
-    }  
-    
-    /**
-     * 
-     */
-    public void search(int quantity)
+    public void searchByPhrase()
     {
-  
+        System.out.println("Searching for Products");
+        System.out.println();
+
+        reader.getString("Please Enter a Search Phrase > ");
+    }
+
+    /**
+     * A method to Search for Products below a set Stock Level
+     */
+    public void searchLowStock()
+    {
+        System.out.println("Searching Low Stocked Products");
+        System.out.println();
     }
     
   

@@ -134,9 +134,37 @@ public class StockList
         {
             System.out.println("Couldn't find product");
         }
-    }    
+    }
 
-    
+    /**
+     * A method to Search for Products based on a Name or Phrase
+     */
+    public void searchByPhrase(String phrase)
+    {
+        for(Product product : stock)
+        {
+            String str = product.getName();
+            if(str.contains("Apple"))
+            {
+                System.out.println(" ID " + product.getID() + " " + product.getName() + " stock level: " + product.getQuantity());
+            }
+        }
+    }
+
+    /**
+     * A method to Search for Products below a set Stock Level
+     */
+    public void searchLowStock(int quantity)
+    {
+        for(Product product : stock)
+        {
+            if (product.getQuantity() >= 0 && product.getQuantity() < 25)
+            {
+                System.out.println(" ID " + product.getID() + " " + product.getName() + " stock level: " + product.getQuantity());
+            }
+        }
+    }
+
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
