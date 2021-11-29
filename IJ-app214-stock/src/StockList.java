@@ -60,12 +60,12 @@ public class StockList
             if(product.getQuantity() <= 1000)
             {
                 product.increaseQuantity(amount);
-                System.out.println("Bought " + amount + " of " + 
+                System.out.println("Bought " + amount + " of ID " + product.getID() + " " +
                 product.getName());
             }
             else
             {
-                System.out.println("Insufficient shelf space for " + 
+                System.out.println("Insufficient shelf space for ID " + product.getID() + " " +
                 product.getName());
             }
         }
@@ -115,17 +115,17 @@ public class StockList
             if(product.getQuantity() > 0 && product.getQuantity() > amount)
             {
                 product.decreaseQuantity(amount);
-                System.out.println("Sold " + amount + " of " + 
+                System.out.println("Sold " + amount + " of ID " +product.getID()+" "+
                 product.getName());
             }
             else if(product.getQuantity() == 0)
             {
-                System.out.println("The product " + product.getName() +
+                System.out.println("The product ID " + product.getID()+ " " + product.getName() +
                 " is out of stock");
             }
             else
             {
-                System.out.println("Unable to sell " + amount + " of " + 
+                System.out.println("Unable to sell " + amount + " of ID " + product.getID() + " " +
                 product.getName() + " due to only " + product.getQuantity() 
                 + " being in stock");
             }
