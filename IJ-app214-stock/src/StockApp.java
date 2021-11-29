@@ -175,6 +175,8 @@ public class StockApp
         System.out.println();
 
         reader.getString("Please Enter a Search Phrase > ");
+
+        stock.searchByPhrase();
     }
 
     /**
@@ -182,21 +184,23 @@ public class StockApp
      */
     public void searchLowStock()
     {
-        System.out.println("Searching Low Stocked Products");
+
+        System.out.println("Searching for Low Stocked Products");
         System.out.println();
+
+        stock.searchLowStock();
     }
     
   
     /**
-     * A method to restock a product by a set amount based on ID
+     * A method to restock a product by a set amount
      */
     public void restockProduct()
     {
-        int id = reader.getInt("Please Enter a Product ID > ");
-        Product product = stock.findProduct(id);
-        product.increaseQuantity(75);
-        System.out.println("Restocked ID: "+product.getID()+" "+
-        product.getName());
+        System.out.println("Restocking Low Stocked Products");
+        System.out.println();
+
+        stock.restockProduct();
     }
     
     /**

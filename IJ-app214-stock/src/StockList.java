@@ -139,7 +139,7 @@ public class StockList
     /**
      * A method to Search for Products based on a Name or Phrase
      */
-    public void searchByPhrase(String phrase)
+    public void searchByPhrase()
     {
         for(Product product : stock)
         {
@@ -154,7 +154,7 @@ public class StockList
     /**
      * A method to Search for Products below a set Stock Level
      */
-    public void searchLowStock(int quantity)
+    public void searchLowStock()
     {
         for(Product product : stock)
         {
@@ -164,6 +164,22 @@ public class StockList
             }
         }
     }
+
+    /**
+     * A method to restock a product by a set amount
+     */
+    public void restockProduct()
+    {
+        for (Product product : stock)
+        {
+            if (product.getQuantity() >= 0 && product.getQuantity() < 25)
+            {
+                product.increaseQuantity(75);
+                System.out.println("Restocked ID: "+product.getID()+" "+ product.getName());
+            }
+        }
+    }
+
 
     /**
      * Locate a product with the given ID, and return how
