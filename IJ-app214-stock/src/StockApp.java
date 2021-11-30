@@ -184,7 +184,6 @@ public class StockApp
      */
     public void searchLowStock()
     {
-
         System.out.println("Searching for Low Stocked Products");
         System.out.println();
 
