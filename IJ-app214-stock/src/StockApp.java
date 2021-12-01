@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * print and remove stock products
  *
  * @author Samuel Baker
- * @version 19/11/2021
+ * @version 01/12/2021
  */
 public class StockApp
 {
@@ -142,7 +142,7 @@ public class StockApp
         Product product = stock.findProduct(id);
         stock.buyProduct(id, amount);
         stock.print();
-        System.out.println("Bought "+amount+" of ID "+product.getID()+": "+
+        System.out.println("Bought "+amount+" of ID: "+product.getID()+": "+
         product.getName());
     }
     
@@ -162,12 +162,12 @@ public class StockApp
         Product product = stock.findProduct(id);
         stock.sellProduct(id, amount);
         stock.print();
-        System.out.println("Sold "+amount+" of ID "+product.getID()+": "+
+        System.out.println("Sold "+amount+" of ID: "+product.getID()+": "+
         product.getName());
     }
     
     /**
-     * A method to Search for Products based on a Name or Phrase
+     * A method to Search for Products based on manufacturer contained within StockList
      */
     public void searchByPhrase()
     {
@@ -189,8 +189,7 @@ public class StockApp
 
         stock.searchLowStock();
     }
-    
-  
+
     /**
      * A method to restock a product by a set amount
      */
@@ -212,7 +211,7 @@ public class StockApp
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    Buy:        Buy a product");
         System.out.println("    Sell:       Sell a product");
-        System.out.println("    Search:     Search for products");
+        System.out.println("    Search:     Search for Apple products");
         System.out.println("    Low Stock:  Lists all products low in stock");
         System.out.println("    Restock:    Restock a product");
         System.out.println("    Print:      Print all products");
