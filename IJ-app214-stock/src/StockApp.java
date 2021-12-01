@@ -211,7 +211,7 @@ public class StockApp
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    Buy:        Buy a product");
         System.out.println("    Sell:       Sell a product");
-        System.out.println("    Search:     Search for Apple products");
+        System.out.println("    Search:     Search for products");
         System.out.println("    Low Stock:  Lists all products low in stock");
         System.out.println("    Restock:    Restock a product");
         System.out.println("    Print:      Print all products");
