@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * This app provides a user interface to the
@@ -5,13 +6,13 @@
  * print and remove stock products
  *
  * @author Samuel Baker
- * @version 19/11/2021
+ * @version 01/12/2021
  */
 public class StockApp
 {
     private InputReader reader;
     
-    private StockList stock;
+    public StockList stock;
     
     /**
      * Constructor for objects of class StockApp
@@ -67,11 +68,11 @@ public class StockApp
         }
         else if(choice.equals("low stock"))
         {
-            
+            searchLowStock();
         }
         else if(choice.equals("search"))
         {
-            
+            searchByPhrase();
         }
         else if(choice.equals("restock"))
         {
@@ -141,7 +142,7 @@ public class StockApp
         Product product = stock.findProduct(id);
         stock.buyProduct(id, amount);
         stock.print();
-        System.out.println("Bought "+amount+" of ID "+product.getID()+": "+
+        System.out.println("Bought "+amount+" of ID: "+product.getID()+": "+
         product.getName());
     }
     
@@ -161,41 +162,43 @@ public class StockApp
         Product product = stock.findProduct(id);
         stock.sellProduct(id, amount);
         stock.print();
-        System.out.println("Sold "+amount+" of ID "+product.getID()+": "+
+        System.out.println("Sold "+amount+" of ID: "+product.getID()+": "+
         product.getName());
     }
     
     /**
-     * A method to Search for Products based on a Name or Phrase
+     * A method to Search for Products based on manufacturer contained within StockList
      */
-    public void search()
-    {  
-        System.out.println("Searching for a Product");
-        System.out.println();
-        
-        String name = reader.getString("Please Enter a Search Phrase > ");
-
-    }  
-    
-    /**
-     * 
-     */
-    public void search(int quantity)
+    public void searchByPhrase()
     {
-  
+        System.out.println("Searching for Products");
+        System.out.println();
+
+        reader.getString("Please Enter a Search Phrase > ");
+
+        stock.searchByPhrase();
     }
-    
-  
+
     /**
-     * A method to restock a product by a set amount based on ID
+     * A method to Search for Products below a set Stock Level
+     */
+    public void searchLowStock()
+    {
+        System.out.println("Searching for Low Stocked Products");
+        System.out.println();
+
+        stock.searchLowStock();
+    }
+
+    /**
+     * A method to restock a product by a set amount
      */
     public void restockProduct()
     {
-        int id = reader.getInt("Please Enter a Product ID > ");
-        Product product = stock.findProduct(id);
-        product.increaseQuantity(75);
-        System.out.println("Restocked ID: "+product.getID()+" "+
-        product.getName());
+        System.out.println("Restocking Low Stocked Products");
+        System.out.println();
+
+        stock.restockProduct();
     }
     
     /**

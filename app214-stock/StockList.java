@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * The stock is described by zero or more Products.
  * 
  * @author Samuel Baker 
- * @version 05/11/2021
+ * @version 01/12/2021
  */
 public class StockList
 {
@@ -32,7 +32,7 @@ public class StockList
     /**
      *  A method to remove a product from the list
      */
-        public void remove(Product product)
+    public void remove(Product product)
     {
         stock.remove(product);
     }
@@ -44,8 +44,7 @@ public class StockList
     {
         buyProduct(productID, 1);
     }
-      
-    
+
     /**
      * Buy a quantity of a particular product.
      * Increase the quantity of the product by the given amount.
@@ -60,12 +59,12 @@ public class StockList
             if(product.getQuantity() <= 1000)
             {
                 product.increaseQuantity(amount);
-                System.out.println("Bought " + amount + " of " + 
+                System.out.println("Bought " + amount + " of ID: " + product.getID() + " " +
                 product.getName());
             }
             else
             {
-                System.out.println("Insufficient shelf space for " + 
+                System.out.println("Insufficient shelf space for ID: " + product.getID() + " " +
                 product.getName());
             }
         }
@@ -115,17 +114,17 @@ public class StockList
             if(product.getQuantity() > 0 && product.getQuantity() > amount)
             {
                 product.decreaseQuantity(amount);
-                System.out.println("Sold " + amount + " of " + 
+                System.out.println("Sold " + amount + " of ID: " +product.getID()+" "+
                 product.getName());
             }
             else if(product.getQuantity() == 0)
             {
-                System.out.println("The product " + product.getName() +
+                System.out.println("The product ID: " + product.getID()+ " " + product.getName() +
                 " is out of stock");
             }
             else
             {
-                System.out.println("Unable to sell " + amount + " of " + 
+                System.out.println("Unable to sell " + amount + " of ID: " + product.getID() + " " +
                 product.getName() + " due to only " + product.getQuantity() 
                 + " being in stock");
             }
@@ -134,19 +133,52 @@ public class StockList
         {
             System.out.println("Couldn't find product");
         }
-    }    
+    }
 
-    
     /**
-     * Locate a product with the given ID, and return how
-     * many of this item are in stock. If the ID does not
-     * match any product, return zero.
-     * @param id The ID of the product.
-     * @return The quantity of the given product in stock.
+     * A method to Search for Products available from Apple contained within StockList
      */
-    public int numberInStock(int productID)
+    public void searchByPhrase()
     {
-        return 0;
+        for(Product product : stock)
+        {
+            String str = product.getName();
+            if(str.contains("Apple"))
+            {
+                System.out.println(" ID: " + product.getID() + " " + product.getName() +
+                        " stock level: " + product.getQuantity());
+            }
+        }
+    }
+
+    /**
+     * A method to Search for Products below a set Stock Level
+     */
+    public void searchLowStock()
+    {
+        for(Product product : stock)
+        {
+            if (product.getQuantity() >= 0 && product.getQuantity() < 75)
+            {
+                System.out.println(" ID: " + product.getID() + " " + product.getName() +
+                        " stock level: " + product.getQuantity());
+            }
+        }
+    }
+
+    /**
+     * A method to restock a product by a set amount
+     */
+    public void restockProduct()
+    {
+        for (Product product : stock)
+        {
+            if (product.getQuantity() >= 0 && product.getQuantity() < 75)
+            {
+                product.increaseQuantity(75);
+                System.out.println("Restocked ID: " + product.getID() + " " + product.getName());
+            }
+        }
     }
 
     /**
