@@ -174,9 +174,8 @@ public class StockApp
         System.out.println("Searching for Products");
         System.out.println();
 
-        reader.getString("Please Enter a Search Phrase > ");
-
-        stock.searchByPhrase();
+        String phrase = reader.getString("Please Enter a Search Phrase > ");
+        stock.searchByPhrase(phrase);
     }
 
     /**
@@ -187,7 +186,8 @@ public class StockApp
         System.out.println("Searching for Low Stocked Products");
         System.out.println();
 
-        stock.searchLowStock();
+        int value = reader.getInt("Please Enter a Stock Level > ");
+        stock.searchLowStock(value);
     }
 
     /**
