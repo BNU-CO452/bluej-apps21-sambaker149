@@ -17,6 +17,7 @@ public class StockList
      */
     public StockList()
     {
+
         stock = new ArrayList<Product>();
     }
 
@@ -138,14 +139,13 @@ public class StockList
     /**
      * A method to Search for Products available from Apple contained within StockList
      */
-    public void searchByPhrase()
+    public void searchByPhrase(String phrase)
     {
         for(Product product : stock)
         {
-            String str = product.getName();
-            if(str.contains("Apple"))
+            if(product.getName().contains(phrase))
             {
-                System.out.println(" ID: " + product.getID() + " " + product.getName() +
+                System.out.println(" ID " + product.getID() + " " + product.getName() +
                         " stock level: " + product.getQuantity());
             }
         }
@@ -154,16 +154,17 @@ public class StockList
     /**
      * A method to Search for Products below a set Stock Level
      */
-    public void searchLowStock()
+    public void searchLowStock(int value)
     {
         for(Product product : stock)
         {
-            if (product.getQuantity() >= 0 && product.getQuantity() < 75)
+            if(product.getQuantity() <= value)
             {
-                System.out.println(" ID: " + product.getID() + " " + product.getName() +
+                System.out.println(" ID " + product.getID() + " " + product.getName() +
                         " stock level: " + product.getQuantity());
             }
         }
+        System.out.println();
     }
 
     /**
