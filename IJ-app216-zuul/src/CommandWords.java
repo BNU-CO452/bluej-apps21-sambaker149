@@ -1,3 +1,4 @@
+
 /**
  * This contains all the possible command words
  * for the game of Zuul
@@ -11,10 +12,10 @@ public enum CommandWords
     TAKE ("take", "Take <item> from location"),
     HELP ("help", "List all available commands"),
     QUIT ("quit", "End the game");
-
+    
     public final String word;
     public final String description;
-
+    
     CommandWords(String word, String description)
     {
         this.word = word;

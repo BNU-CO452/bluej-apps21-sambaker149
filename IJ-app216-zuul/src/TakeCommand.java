@@ -1,3 +1,4 @@
+
 /**
  * This command allows the player to
  * take or pickup an item from a room
@@ -10,7 +11,7 @@
 public class TakeCommand extends ZuulCommand
 {
     String item;
-
+    
     /**
      * Take an item from a location and add it
      * to the player's inventory.
@@ -19,11 +20,11 @@ public class TakeCommand extends ZuulCommand
     {
         super(zuul);
         this.item = item;
-    }
+    }    
 
     public void execute()
     {
-        if(item == null)
+        if(item == null) 
         {
             // if there is no second word, we don't know what to take...
             System.out.println("Take what?");

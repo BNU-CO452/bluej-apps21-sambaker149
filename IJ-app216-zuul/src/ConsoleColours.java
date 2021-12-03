@@ -1,2 +1,3 @@
-public class ConsoleColours {
+public class ConsoleColours
+{
 }

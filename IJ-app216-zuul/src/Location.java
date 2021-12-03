@@ -11,25 +11,23 @@ import java.util.Iterator;
  * A "Location" represents one place in the scenery of the game.  It is 
  * connected to other locations via exits.  For each existing exit, the 
  * location stores a reference to the neighboring locations.
- *
+ * 
  * @author  Michael Kölling and David J. Barnes
  * Modified by Derek Peacock & Nicholas Day
  * @version 2016.02.29
  */
 
-public class Location
+public class Location 
 {
     private String description;
-    // stores exits of this room.
-    private HashMap<String, Location> exits;
+    private HashMap<String, Location> exits;        // stores exits of this room.
 
     /**
-     * Create a location described by "description".
-     * Initially, a location has no exits.
-     * "description" is something like "a kitchen" or
+     * Create a location described "description". Initially, it has
+     * no exits. "description" is something like "a kitchen" or
      * "an open court yard".
      */
-    public Location(String description)
+    public Location(String description) 
     {
         this.description = description;
         exits = new HashMap<>();
@@ -40,7 +38,7 @@ public class Location
      * @param direction The direction of the exit.
      * @param neighbor  The room to which the exit leads.
      */
-    public void setExit(String direction, Location neighbor)
+    public void setExit(String direction, Location neighbor) 
     {
         exits.put(direction, neighbor);
     }
@@ -66,22 +64,19 @@ public class Location
     }
 
     /**
-     * Return a string listing the locations's exits,
+     * Return a string describing the locations's exits, 
      * for example "Exits: north west".
      */
     private String getExitString()
     {
-        String exitNames = " Exits: ";
+        String returnString = " Exits:";
         Set<String> keys = exits.keySet();
-
-        for(String exit : keys)
+        
+        for(String exit : keys) 
         {
-            if(exitNames.length() > 8)
-                exitNames += ", " + exit;
-            else
-                exitNames += exit;
+            returnString += " " + exit;
         }
-        return exitNames;
+        return returnString;
     }
 
     /**
@@ -90,8 +85,9 @@ public class Location
      * @param direction The exit's direction.
      * @return The room in the given direction.
      */
-    public Location getExit(String direction)
+    public Location getExit(String direction) 
     {
         return exits.get(direction);
     }
 }
+
