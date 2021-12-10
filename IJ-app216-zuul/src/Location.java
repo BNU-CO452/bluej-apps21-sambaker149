@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -20,6 +21,8 @@ import java.util.Iterator;
 public class Location 
 {
     private String description;
+    private Item item;
+    private ArrayList<Item> items;
     private HashMap<String, Location> exits;        // stores exits of this room.
 
     /**
