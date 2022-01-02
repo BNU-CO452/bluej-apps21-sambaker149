@@ -1,4 +1,4 @@
 public enum ItemType
 {
-    food, drink, treasure
+    peripherals, components
 }
