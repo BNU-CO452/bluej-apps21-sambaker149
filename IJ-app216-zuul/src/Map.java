@@ -10,7 +10,7 @@
  *           |                                     |                       |
  *       [Aisle3]<---->[Aisle 2]                   |                   [Aisle 6]<---->[Aisle 7]
  *                        |                        |                       |
- *[Aisle 1]<---->[Processors Section]<---->[Store Entrance]<---->[Miscellaneous Section]<---->[Aisle 8]
+ *[Aisle 1]<---->[Components Section]<---->[Store Entrance]<---->[Miscellaneous Section]<---->[Aisle 8]
  *                                                |                                               |
  *                                            [Outside]                                      [Staff Area]
  *             
@@ -21,7 +21,7 @@ public class Map
 {
     // Need to add a list of exits
     
-    private Location outside, storeEntrance, processors, accessories, miscellaneous, aisle1, aisle2, aisle3, aisle4,
+    private Location outside, storeEntrance, internalComponents, accessories, miscellaneous, aisle1, aisle2, aisle3, aisle4,
             aisle5, aisle6, aisle7, aisle8, staff1, staff2, staff3;
 
     private Location currentLocation;
@@ -44,7 +44,7 @@ public class Map
     {
         createOutside();
         createStoreEntrance();
-        createProcessors();
+        createInternalComponents();
         createAccessories();
         createMiscellaneous();
         createAisle1();
@@ -69,9 +69,6 @@ public class Map
     private void createOutside()
     {
         outside = new Location("You are outside the Main Entrance of the Store");
-
-        outside.setExit("north", storeEntrance);
-        storeEntrance.setExit("south", outside);
     }
 
     /**
@@ -81,17 +78,19 @@ public class Map
     {
         storeEntrance = new Location("You have entered the Store");
 
-        storeEntrance.setExit("south", outside);
         outside.setExit("north", storeEntrance);
+        storeEntrance.setExit("south", outside);
+    }
 
-        storeEntrance.setExit("west", processors);
-        processors.setExit("east", storeEntrance);
+    /**
+     * Create the processors section and link it to the store entrance and aisles
+     */
+    private void createInternalComponents()
+    {
+        internalComponents = new Location("You are in the Internal Components Section");
 
-        storeEntrance.setExit("north", accessories);
-        accessories.setExit("south", storeEntrance);
-
-        storeEntrance.setExit("east", miscellaneous);
-        miscellaneous.setExit("west", storeEntrance);
+        storeEntrance.setExit("west", internalComponents);
+        internalComponents.setExit("east", storeEntrance);
     }
 
     /**
@@ -100,31 +99,9 @@ public class Map
     private void createAccessories()
     {
         accessories = new Location("You are in the Accessories and Hardware Section");
-        
-        accessories.setExit("south", storeEntrance);
+
         storeEntrance.setExit("north", accessories);
-
-        accessories.setExit("west", aisle4);
-        aisle4.setExit("east", accessories);
-
-        accessories.setExit("north", aisle5);
-        aisle5.setExit("south", accessories);
-
-        accessories.setExit("east", staff2);
-    }
-
-    /**
-     * Create the processors section and link it to the store entrance and aisles
-     */
-    private void createProcessors()
-    {
-        processors = new Location("You are in the Processors Section");
-
-        processors.setExit("east", storeEntrance);
-        storeEntrance.setExit("west", processors);
-
-        processors.setExit("west", aisle1);
-        aisle1.setExit("east", processors);
+        accessories.setExit("south", storeEntrance);
     }
 
     /**
@@ -134,51 +111,52 @@ public class Map
     {
         miscellaneous = new Location("You are in the Miscellaneous Section");
 
-        miscellaneous.setExit("west", storeEntrance);
         storeEntrance.setExit("east", miscellaneous);
-
-        miscellaneous.setExit("north", aisle6);
-        aisle6.setExit("south", miscellaneous);
-
-        miscellaneous.setExit("east", aisle8);
-        aisle8.setExit("west", miscellaneous);
+        miscellaneous.setExit("west", storeEntrance);
     }
 
     /**
-     * Create aisle 1 linked to the processors section
+     * Create aisle 1 linked to the internal components section
      */
     private void createAisle1()
     {
         aisle1 = new Location("You are in Aisle 1");
 
-        aisle1.setExit("east", processors);
-        processors.setExit("west", aisle1);
+        internalComponents.setExit("west", aisle1);
+        aisle1.setExit("east", internalComponents);
+
+        Item cpu = new Item(ItemType.components, "CPU");
+        aisle1.addItem(cpu);
+
+        Item ssd = new Item(ItemType.components, "SSD");
+        aisle1.addItem(ssd);
     }
     /**
-     * Create aisle 2 linked to the processors section
+     * Create aisle 2 linked to the internal components section
      */
     private void createAisle2()
     {
         aisle2 = new Location("You are in Aisle 2");
 
-        aisle2.setExit("south", processors);
         accessories.setExit("north", aisle2);
+        aisle2.setExit("south", internalComponents);
 
-        aisle2.setExit("west", aisle3);
-        aisle3.setExit("east", aisle2);
+        Item graphicsCard = new Item(ItemType.components, "Graphics Card");
+        aisle2.addItem(graphicsCard);
     }
 
     /**
-     * Create aisle 3 linked to the accessories section
+     * Create aisle 3 linked to aisle 2
      */
     private void createAisle3()
     {
         aisle3 = new Location("You are in Aisle 3");
 
-        aisle3.setExit("east", aisle2);
         aisle2.setExit("west", aisle3);
+        aisle3.setExit("east", aisle2);
 
-        aisle3.setExit("north", staff1);
+        Item wifiCard = new Item(ItemType.components, "WiFi Card");
+        aisle3.addItem(wifiCard);
     }
 
     /**
@@ -190,6 +168,9 @@ public class Map
 
         aisle4.setExit("east", accessories);
         accessories.setExit("west", aisle4);
+
+        Item mouse = new Item(ItemType.peripherals, "Mouse");
+        aisle4.addItem(mouse);
     }
 
     /**
@@ -201,6 +182,12 @@ public class Map
         
         aisle5.setExit("south", accessories);
         accessories.setExit("north", aisle5);
+
+        Item keyboard = new Item(ItemType.peripherals, "Keyboard");
+        aisle5.addItem(keyboard);
+
+        Item monitor = new Item(ItemType.peripherals, "Monitor");
+        aisle5.addItem(monitor);
     }
 
     /**
@@ -210,24 +197,22 @@ public class Map
     {
         aisle6 = new Location("You are in Aisle 6");
 
-        aisle6.setExit("south", miscellaneous);
         miscellaneous.setExit("north", aisle6);
-
-        aisle6.setExit("east", aisle7);
-        aisle7.setExit("west", aisle6);
-
-        aisle6.setExit("north", staff2);
+        aisle6.setExit("south", miscellaneous);
     }
 
     /**
-     * Create aisle 7 linked to the miscellaneous section
+     * Create aisle 7 linked to aisle 6
      */
     private void createAisle7()
     {
         aisle7 = new Location("You are in Aisle 7");
 
-        aisle7.setExit("west", aisle6);
         aisle6.setExit("east", aisle7);
+        aisle7.setExit("west", aisle6);
+
+        Item pcCase = new Item(ItemType.components, "PC Case");
+        aisle7.addItem(pcCase);
     }
 
     /**
@@ -237,10 +222,11 @@ public class Map
     {
         aisle8 = new Location("You are in Aisle 8");
 
-        aisle8.setExit("west", miscellaneous);
         miscellaneous.setExit("east", aisle8);
+        aisle8.setExit("west", miscellaneous);
 
-        aisle8.setExit("south", staff3);
+        Item hdmiCable = new Item(ItemType.accessories, "HDMI Cable");
+        aisle8.addItem(hdmiCable);
     }
 
     /**
@@ -249,6 +235,8 @@ public class Map
     private void createStaffArea1()
     {
         staff1 = new Location("You have entered the Staff Area - GAME OVER");
+
+        aisle3.setExit("north", staff1);
     }
 
     /**
@@ -257,6 +245,10 @@ public class Map
     private void createStaffArea2()
     {
         staff2 = new Location("You have entered the Staff Area - GAME OVER");
+
+        aisle6.setExit("north", staff2);
+
+        accessories.setExit("east", staff2);
     }
 
     /**
@@ -265,6 +257,8 @@ public class Map
     private void createStaffArea3()
     {
         staff3 = new Location("You have entered the Staff Area - GAME OVER");
+
+        aisle8.setExit("south", staff3);
     }
     
     public Location getCurrentLocation()

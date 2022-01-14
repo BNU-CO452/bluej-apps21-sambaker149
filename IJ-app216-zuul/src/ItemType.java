@@ -1,4 +1,4 @@
 public enum ItemType
 {
-    peripherals, components
+    peripherals, components, accessories
 }

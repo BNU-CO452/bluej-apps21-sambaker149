@@ -13,6 +13,7 @@ public enum CommandWords
     HELP ("help", "List all available commands"),
     QUIT ("quit", "End the game");
     
+    
     public final String word;
     public final String description;
     

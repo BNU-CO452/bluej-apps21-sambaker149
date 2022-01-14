@@ -29,7 +29,7 @@ public class Game
     public Game() 
     {
         MAP = new Map();
-        player = new Player();
+        player = new Player("Sam");
         reader = new CommandReader(this);
     }
 

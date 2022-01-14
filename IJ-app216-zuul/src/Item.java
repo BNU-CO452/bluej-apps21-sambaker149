@@ -1,13 +1,45 @@
 public class Item
 {
     private ItemType itemType;
+
     private String name;
+
     private int value;
 
     public Item(ItemType type, String name)
     {
-        this.itemType = type;
+        this.setItemType(type);
+        this.setName(name);
+        setValue(0);
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public ItemType getItemType()
+    {
+        return itemType;
+    }
+
+    public void setItemType(ItemType itemType)
+    {
+        this.itemType = itemType;
+    }
+
+    public void setName(String name)
+    {
         this.name = name;
-        value = 0;
+    }
+
+    public int getValue()
+    {
+        return value;
+    }
+
+    public void setValue(int value)
+    {
+        this.value = value;
     }
 }
