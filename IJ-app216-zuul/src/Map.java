@@ -68,7 +68,10 @@ public class Map
      */
     private void createOutside()
     {
-        outside = new Location("You are outside the Main Entrance of the Store");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
+
+        outside = new Location("outside the Main Entrance of the Store");
     }
 
     /**
@@ -76,7 +79,10 @@ public class Map
      */
     private void createStoreEntrance()
     {
-        storeEntrance = new Location("You have entered the Store");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
+
+        storeEntrance = new Location("inside the Store");
 
         outside.setExit("north", storeEntrance);
         storeEntrance.setExit("south", outside);
@@ -87,7 +93,10 @@ public class Map
      */
     private void createInternalComponents()
     {
-        internalComponents = new Location("You are in the Internal Components Section");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
+
+        internalComponents = new Location("in the Internal Components Section");
 
         storeEntrance.setExit("west", internalComponents);
         internalComponents.setExit("east", storeEntrance);
@@ -98,7 +107,10 @@ public class Map
      */
     private void createAccessories()
     {
-        accessories = new Location("You are in the Accessories and Hardware Section");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
+
+        accessories = new Location("in the Accessories and Hardware Section");
 
         storeEntrance.setExit("north", accessories);
         accessories.setExit("south", storeEntrance);
@@ -109,7 +121,10 @@ public class Map
      */
     private void createMiscellaneous()
     {
-        miscellaneous = new Location("You are in the Miscellaneous Section");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
+
+        miscellaneous = new Location("in the Miscellaneous Section");
 
         storeEntrance.setExit("east", miscellaneous);
         miscellaneous.setExit("west", storeEntrance);
@@ -120,15 +135,18 @@ public class Map
      */
     private void createAisle1()
     {
-        aisle1 = new Location("You are in Aisle 1");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
+
+        aisle1 = new Location("in Aisle 1");
 
         internalComponents.setExit("west", aisle1);
         aisle1.setExit("east", internalComponents);
 
-        Item cpu = new Item(ItemType.components, "CPU");
+        Item cpu = new Item(ItemType.Components, "CPU");
         aisle1.addItem(cpu);
 
-        Item ssd = new Item(ItemType.components, "SSD");
+        Item ssd = new Item(ItemType.Components, "SSD");
         aisle1.addItem(ssd);
     }
     /**
@@ -136,12 +154,15 @@ public class Map
      */
     private void createAisle2()
     {
-        aisle2 = new Location("You are in Aisle 2");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
 
-        accessories.setExit("north", aisle2);
+        aisle2 = new Location("in Aisle 2");
+
+        internalComponents.setExit("north", aisle2);
         aisle2.setExit("south", internalComponents);
 
-        Item graphicsCard = new Item(ItemType.components, "Graphics Card");
+        Item graphicsCard = new Item(ItemType.Components, "Graphics Card");
         aisle2.addItem(graphicsCard);
     }
 
@@ -150,12 +171,15 @@ public class Map
      */
     private void createAisle3()
     {
-        aisle3 = new Location("You are in Aisle 3");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
+
+        aisle3 = new Location("in Aisle 3");
 
         aisle2.setExit("west", aisle3);
         aisle3.setExit("east", aisle2);
 
-        Item wifiCard = new Item(ItemType.components, "WiFi Card");
+        Item wifiCard = new Item(ItemType.Components, "WiFi Card");
         aisle3.addItem(wifiCard);
     }
 
@@ -164,12 +188,15 @@ public class Map
      */
     private void createAisle4()
     {
-        aisle4 = new Location("You are in Aisle 4");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
+
+        aisle4 = new Location("in Aisle 4");
 
         aisle4.setExit("east", accessories);
         accessories.setExit("west", aisle4);
 
-        Item mouse = new Item(ItemType.peripherals, "Mouse");
+        Item mouse = new Item(ItemType.Peripherals, "Mouse");
         aisle4.addItem(mouse);
     }
 
@@ -178,15 +205,18 @@ public class Map
      */
     private void createAisle5()
     {
-        aisle5 = new Location("You are in Aisle 5");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
+
+        aisle5 = new Location("in Aisle 5");
         
         aisle5.setExit("south", accessories);
         accessories.setExit("north", aisle5);
 
-        Item keyboard = new Item(ItemType.peripherals, "Keyboard");
+        Item keyboard = new Item(ItemType.Peripherals, "Keyboard");
         aisle5.addItem(keyboard);
 
-        Item monitor = new Item(ItemType.peripherals, "Monitor");
+        Item monitor = new Item(ItemType.Peripherals, "Monitor");
         aisle5.addItem(monitor);
     }
 
@@ -195,7 +225,10 @@ public class Map
      */
     private void createAisle6()
     {
-        aisle6 = new Location("You are in Aisle 6");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
+
+        aisle6 = new Location("in Aisle 6");
 
         miscellaneous.setExit("north", aisle6);
         aisle6.setExit("south", miscellaneous);
@@ -206,12 +239,15 @@ public class Map
      */
     private void createAisle7()
     {
-        aisle7 = new Location("You are in Aisle 7");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
+
+        aisle7 = new Location("in Aisle 7");
 
         aisle6.setExit("east", aisle7);
         aisle7.setExit("west", aisle6);
 
-        Item pcCase = new Item(ItemType.components, "PC Case");
+        Item pcCase = new Item(ItemType.Components, "PC Case");
         aisle7.addItem(pcCase);
     }
 
@@ -220,12 +256,15 @@ public class Map
      */
     private void createAisle8()
     {
-        aisle8 = new Location("You are in Aisle 8");
+        System.out.print(ConsoleColours.ANSI_BG_CYAN);
+        System.out.print(ConsoleColours.ANSI_BLACK);
+
+        aisle8 = new Location("in Aisle 8");
 
         miscellaneous.setExit("east", aisle8);
         aisle8.setExit("west", miscellaneous);
 
-        Item hdmiCable = new Item(ItemType.accessories, "HDMI Cable");
+        Item hdmiCable = new Item(ItemType.Accessories, "HDMI Cable");
         aisle8.addItem(hdmiCable);
     }
 
@@ -234,7 +273,7 @@ public class Map
      */
     private void createStaffArea1()
     {
-        staff1 = new Location("You have entered the Staff Area - GAME OVER");
+        staff1 = new Location("in the Staff Area - GAME OVER");
 
         aisle3.setExit("north", staff1);
     }
@@ -244,7 +283,7 @@ public class Map
      */
     private void createStaffArea2()
     {
-        staff2 = new Location("You have entered the Staff Area - GAME OVER");
+        staff2 = new Location("in the Staff Area - GAME OVER");
 
         aisle6.setExit("north", staff2);
 
@@ -256,7 +295,7 @@ public class Map
      */
     private void createStaffArea3()
     {
-        staff3 = new Location("You have entered the Staff Area - GAME OVER");
+        staff3 = new Location("in the Staff Area - GAME OVER");
 
         aisle8.setExit("south", staff3);
     }

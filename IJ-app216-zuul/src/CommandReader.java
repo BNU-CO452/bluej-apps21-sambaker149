@@ -20,9 +20,10 @@ public class CommandReader
 {
     private Game game;
     private Scanner reader; // source of command input
+    public Boolean gameOver;
 
-    private String commandWord = null;
-    private String word2 = null;
+    public String commandWord = null;
+    public String word2 = null;
     /**
      * Create a parser to read from the terminal window.
      */
@@ -71,11 +72,26 @@ public class CommandReader
         {
             TakeCommand take = new TakeCommand(game, word2);
             take.execute();
-        }        
+        }
+        else if(commandWord.equals(CommandWords.ITEMS.word))
+        {
+            ItemsCommand items = new ItemsCommand(game);
+            items.execute();
+        }
+        else if(commandWord.equals(CommandWords.FINISH.word))
+        {
+            FinishCommand finish = new FinishCommand(game);
+            finish.execute();
+        }
         else if(commandWord.equals(CommandWords.HELP.word))
         {
             HelpCommand help = new HelpCommand(game);
             help.execute();
+        }
+        else if(commandWord.equals(CommandWords.RESTART.word))
+        {
+            RestartCommand restart = new RestartCommand(game);
+            restart.execute();
         }
         else if(commandWord.equals(CommandWords.QUIT.word))
         {
