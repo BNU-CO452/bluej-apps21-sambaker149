@@ -1,4 +1,3 @@
-
 /**
  * This class is reponsible for creating and
  * linking all the Locations in the game to
@@ -15,7 +14,8 @@
  *                                            [Outside]                                      [Staff Area]
  *             
  * @author Derek Peacock and Nicholas Day
- * @version 2021-08-22
+ * @version 18/01/2022
+ * @modified Samuel Baker
  */
 public class Map
 {
@@ -24,7 +24,7 @@ public class Map
     private Location outside, storeEntrance, internalComponents, accessories, miscellaneous, aisle1, aisle2, aisle3, aisle4,
             aisle5, aisle6, aisle7, aisle8, staff1, staff2, staff3;
 
-    private Location currentLocation;
+    public Location currentLocation;
 
     /**
      * Constructor for objects of class Map
@@ -68,9 +68,6 @@ public class Map
      */
     private void createOutside()
     {
-        System.out.print(ConsoleColours.ANSI_BG_CYAN);
-        System.out.print(ConsoleColours.ANSI_BLACK);
-
         outside = new Location("outside the Main Entrance of the Store");
     }
 
@@ -107,9 +104,6 @@ public class Map
      */
     private void createAccessories()
     {
-        System.out.print(ConsoleColours.ANSI_BG_CYAN);
-        System.out.print(ConsoleColours.ANSI_BLACK);
-
         accessories = new Location("in the Accessories and Hardware Section");
 
         storeEntrance.setExit("north", accessories);
@@ -121,9 +115,6 @@ public class Map
      */
     private void createMiscellaneous()
     {
-        System.out.print(ConsoleColours.ANSI_BG_CYAN);
-        System.out.print(ConsoleColours.ANSI_BLACK);
-
         miscellaneous = new Location("in the Miscellaneous Section");
 
         storeEntrance.setExit("east", miscellaneous);
@@ -135,9 +126,6 @@ public class Map
      */
     private void createAisle1()
     {
-        System.out.print(ConsoleColours.ANSI_BG_CYAN);
-        System.out.print(ConsoleColours.ANSI_BLACK);
-
         aisle1 = new Location("in Aisle 1");
 
         internalComponents.setExit("west", aisle1);
@@ -154,9 +142,6 @@ public class Map
      */
     private void createAisle2()
     {
-        System.out.print(ConsoleColours.ANSI_BG_CYAN);
-        System.out.print(ConsoleColours.ANSI_BLACK);
-
         aisle2 = new Location("in Aisle 2");
 
         internalComponents.setExit("north", aisle2);
@@ -171,9 +156,6 @@ public class Map
      */
     private void createAisle3()
     {
-        System.out.print(ConsoleColours.ANSI_BG_CYAN);
-        System.out.print(ConsoleColours.ANSI_BLACK);
-
         aisle3 = new Location("in Aisle 3");
 
         aisle2.setExit("west", aisle3);
@@ -188,9 +170,6 @@ public class Map
      */
     private void createAisle4()
     {
-        System.out.print(ConsoleColours.ANSI_BG_CYAN);
-        System.out.print(ConsoleColours.ANSI_BLACK);
-
         aisle4 = new Location("in Aisle 4");
 
         aisle4.setExit("east", accessories);
@@ -205,9 +184,6 @@ public class Map
      */
     private void createAisle5()
     {
-        System.out.print(ConsoleColours.ANSI_BG_CYAN);
-        System.out.print(ConsoleColours.ANSI_BLACK);
-
         aisle5 = new Location("in Aisle 5");
         
         aisle5.setExit("south", accessories);
@@ -225,9 +201,6 @@ public class Map
      */
     private void createAisle6()
     {
-        System.out.print(ConsoleColours.ANSI_BG_CYAN);
-        System.out.print(ConsoleColours.ANSI_BLACK);
-
         aisle6 = new Location("in Aisle 6");
 
         miscellaneous.setExit("north", aisle6);
@@ -239,9 +212,6 @@ public class Map
      */
     private void createAisle7()
     {
-        System.out.print(ConsoleColours.ANSI_BG_CYAN);
-        System.out.print(ConsoleColours.ANSI_BLACK);
-
         aisle7 = new Location("in Aisle 7");
 
         aisle6.setExit("east", aisle7);
@@ -256,9 +226,6 @@ public class Map
      */
     private void createAisle8()
     {
-        System.out.print(ConsoleColours.ANSI_BG_CYAN);
-        System.out.print(ConsoleColours.ANSI_BLACK);
-
         aisle8 = new Location("in Aisle 8");
 
         miscellaneous.setExit("east", aisle8);

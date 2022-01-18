@@ -1,10 +1,10 @@
 public class Item
 {
-    private ItemType itemType;
+    public ItemType itemType;
 
-    private String name;
+    public String name;
 
-    private int value;
+    public int value;
 
     public Item(ItemType type, String name)
     {

@@ -3,21 +3,23 @@ import java.util.ArrayList;
 /**
  * This class contains information relating to the player, including the name, score and list of items that the player
  * has picked up
+ *
+ * @author Samuel Baker
+ * @version 18/01/2022
  */
 public class Player
 {
-    private String name;
+    public String name;
 
-    private int lives;
+    public int lives;
 
-    private Item item;
+    public Item item;
 
     public int score = 0;
 
     public ArrayList<Item> items;
 
-    // This is a percentage
-    private int itemPercentage;
+    public int itemPercentage;
 
     public Player(String name)
     {
@@ -45,9 +47,7 @@ public class Player
     }
 
     /**
-     * If the item is an item of treasure inclrease
-     * the score
-     * @param item
+     * Increase the score based on type of itemgo
      */
     public void addItem(Item item)
     {

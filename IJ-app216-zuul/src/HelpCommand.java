@@ -1,9 +1,9 @@
-import java.util.ArrayList;
 /**
- * Write a description of class HelpCommand here.
+ * Gives user information on how to play the
+ * zuul game
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Samuel Baker
+ * @version 18/01/2022
  */
 public class HelpCommand extends ZuulCommand
 {
@@ -19,19 +19,28 @@ public class HelpCommand extends ZuulCommand
      */
     public void execute()
     {
-        System.out.println(" You are lost. You are alone. You wander");
-        System.out.println(" around at the university.");        
+        System.out.print(ConsoleColours.ANSI_BG_BLACK);
+        System.out.print(ConsoleColours.ANSI_CYAN);
+        System.out.println(" You are outside a Technology Store.");
+        System.out.println(" You want to buy parts to build a PC but");
+        System.out.println(" you see that it's very disjointing inside");
+        System.out.println();
+        System.out.println(" Your task is to go around the store and try to");
+        System.out.println(" the parts you need.");
+        System.out.println();
+        System.out.println(" Without all the items you need, you can't win");
+        System.out.println(" the game. GOOD LUCK!");
         System.out.println();
         System.out.println(" Your command words are:");
         System.out.println();
         
         for(CommandWords command : CommandWords.values())
         {
-            System.out.println(" " + command.word + 
+            System.out.println(" "+ command.word +
                                "\t  : " + command.description);                        
         }   
         System.out.println();
-        System.out.println(" e.g. go west, take gold");
+        System.out.println(" e.g. go west, take keyboard");
         System.out.println();
         System.out.println(zuul.MAP.getCurrentLocation().getLongDescription());
     }

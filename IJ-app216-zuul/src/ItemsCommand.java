@@ -13,10 +13,11 @@ public class ItemsCommand extends ZuulCommand
     public ItemsCommand(Game zuul)
     {
         super(zuul);
+        Item items;
     }
     public void execute()
     {
-        System.out.print(ConsoleColours.ANSI_BRIGHT_BG_YELLOW);
+        System.out.print(ConsoleColours.ANSI_BG_YELLOW);
         System.out.print(ConsoleColours.ANSI_BLACK);
         System.out.println(items);
     }

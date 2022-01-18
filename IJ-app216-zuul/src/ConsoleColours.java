@@ -1,8 +1,9 @@
 /**
- * Write a description of class ConsoleColours here.
+ * This class contains different colours to alter
+ * the colour of the console window
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Samuel Baker
+ * @version 03/12/2021
  */
 public class ConsoleColours
 {

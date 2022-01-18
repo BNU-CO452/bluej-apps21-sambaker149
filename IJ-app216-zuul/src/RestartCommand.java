@@ -12,6 +12,7 @@ public class RestartCommand extends ZuulCommand
     }
     public void execute()
     {
+        Game zuul = new Game();
         zuul.play();
     }
 }

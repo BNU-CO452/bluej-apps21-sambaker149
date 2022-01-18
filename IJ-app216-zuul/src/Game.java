@@ -11,9 +11,8 @@
  *  locations, creates the CommandReader and starts the game.
  *
  * @author  Michael Kölling and David J. Barnes
- * @version 2016.02.29
- *
- * Modified and extended by Student Name
+ * @version 18/01/2022
+ * @modified Samuel Baker
  */
 
 public class Game
@@ -24,13 +23,16 @@ public class Game
     private CommandReader reader;
     public boolean gameOver;
 
+    public int score;
+    public int itemPercentage;
+
     /**
      * Create the game and initialise its internal map.
      */
     public Game()
     {
         MAP = new Map();
-        Player = new Player("Derek");
+        Player = new Player("Sam");
         reader = new CommandReader(this);
     }
 
@@ -50,7 +52,7 @@ public class Game
             gameOver = reader.getCommand();
         }
 
-        System.out.println("Thank you for playing.  Good bye.");
+        System.out.println("Thank you for playing. Goodbye.");
     }
 
     /**
@@ -59,11 +61,16 @@ public class Game
     private void printWelcome()
     {
         System.out.print(ConsoleColours.ANSI_BG_BLACK);
-        System.out.print(ConsoleColours.ANSI_WHITE);
+        System.out.print(ConsoleColours.ANSI_CYAN);
+        System.out.println(" Welcome to the PC Maze!");
+        System.out.println(" The aim of this game is to find");
+        System.out.println(" the parts needed to build a PC within");
+        System.out.println(" this disjointed tech store. GOOD LUCK!");
         System.out.println();
-        System.out.println(" Welcome to the World of Zuul!");
-        System.out.println(" World of Zuul is a new, incredibly boring adventure game.");
         System.out.println(" Type 'help' if you need help.");
+        System.out.println();
+        System.out.println(" Your score is " + score);
+        System.out.println(" Your progress is " + itemPercentage + "%");
         System.out.println();
         System.out.println(MAP.getCurrentLocation().getLongDescription());
     }
