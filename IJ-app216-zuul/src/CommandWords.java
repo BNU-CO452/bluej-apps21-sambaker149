@@ -12,6 +12,7 @@ public enum CommandWords
     GO      ("go",      "Exit location in <direction>"),
     TAKE    ("take",    "Take <item> from location"),
     ITEMS   ("items",   "List items the Player has"),
+    SCORE   ("score",   "Prints the score and progress"),
     FINISH  ("finish",  "Submits progress when player finished"),
     HELP    ("help",    "List all available commands"),
     RESTART ("restart", "Restart the game"),

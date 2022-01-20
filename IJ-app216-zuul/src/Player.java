@@ -9,15 +9,15 @@ import java.util.ArrayList;
  */
 public class Player
 {
-    public String name;
+    private String name;
 
-    public int lives;
+    private int lives;
 
-    public Item item;
+    private Item item;
 
     public int score = 0;
 
-    public ArrayList<Item> items;
+    private ArrayList<Item> items;
 
     public int itemPercentage;
 
@@ -28,7 +28,7 @@ public class Player
         itemPercentage = 0;
     }
 
-    public void increasePercentage(int amount)
+    public void increaseItemPercentage(int amount)
     {
         itemPercentage += amount;
 
@@ -36,9 +36,13 @@ public class Player
             itemPercentage = 100;
     }
 
-    public void decreasePercentage(int amount)
+    public void decreaseEnergy(int amount)
     {
         itemPercentage -= amount;
+        if(itemPercentage < 10)
+        {
+            lives = 0;
+        }
     }
 
     public boolean isAlive()
@@ -47,23 +51,23 @@ public class Player
     }
 
     /**
-     * Increase the score based on type of itemgo
+     * Increase the score based on type of item
      */
     public void addItem(Item item)
     {
         this.item = item;
 
-        if(item.getItemType()==ItemType.Peripherals)
+        if (item.getItemType() == ItemType.Peripherals)
         {
             itemPercentage += 11.1;
             score += 10;
         }
-        else if(item.getItemType()==ItemType.Components)
+        else if (item.getItemType() == ItemType.Components)
         {
             itemPercentage += 11.1;
             score += 11;
         }
-        else if(item.getItemType()==ItemType.Accessories)
+        else if (item.getItemType() == ItemType.Accessories)
         {
             itemPercentage += 11.1;
             score += 5;

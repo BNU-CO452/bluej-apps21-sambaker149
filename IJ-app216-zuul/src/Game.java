@@ -11,8 +11,9 @@
  *  locations, creates the CommandReader and starts the game.
  *
  * @author  Michael Kölling and David J. Barnes
- * @version 18/01/2022
- * @modified Samuel Baker
+ * @version 2016.02.29
+ *
+ * Modified and extended by Student Name
  */
 
 public class Game
@@ -21,11 +22,10 @@ public class Game
     public Player Player;
 
     private CommandReader reader;
-    public boolean gameOver;
+    private boolean gameOver;
 
-    public int score;
-    public int itemPercentage;
-
+    int score;
+    int itemPercentage;
     /**
      * Create the game and initialise its internal map.
      */
@@ -52,7 +52,7 @@ public class Game
             gameOver = reader.getCommand();
         }
 
-        System.out.println("Thank you for playing. Goodbye.");
+        System.out.println("Thank you for playing.  Goodbye.");
     }
 
     /**

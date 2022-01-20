@@ -1,21 +1,21 @@
 public class Item
 {
-    public ItemType itemType;
+    private ItemType itemType;
 
-    public String name;
+    private String itemName;
 
-    public int value;
+    private int value;
 
     public Item(ItemType type, String name)
     {
         this.setItemType(type);
-        this.setName(name);
+        this.setItemName(name);
         setValue(0);
     }
 
     public String getName()
     {
-        return name;
+        return itemName;
     }
 
     public ItemType getItemType()
@@ -28,9 +28,9 @@ public class Item
         this.itemType = itemType;
     }
 
-    public void setName(String name)
+    public void setItemName(String name)
     {
-        this.name = name;
+        this.itemName = name;
     }
 
     public int getValue()

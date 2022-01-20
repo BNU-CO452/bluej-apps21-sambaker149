@@ -20,15 +20,13 @@ import java.util.Iterator;
 
 public class Location
 {
-    private String description;
+    public String description;
 
-    // choose single item
-    private Item item;
+    public Item item;
 
-    // choose list of items
-    private ArrayList<Item> items;
+    public ArrayList<Item> items;
 
-    private HashMap<String, Location> exits;        // stores exits of this room.
+    public HashMap<String, Location> exits;
 
     /**
      * Create a location described "description". Initially, it has
