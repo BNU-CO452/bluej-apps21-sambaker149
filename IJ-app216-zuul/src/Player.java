@@ -55,22 +55,30 @@ public class Player
      */
     public void addItem(Item item)
     {
-        this.item = item;
+        if(item == null)
+        {
+            System.out.println("Take what?");
+        }
+        else
+        {
+            this.item = item;
 
-        if (item.getItemType() == ItemType.Peripherals)
-        {
-            itemPercentage += 11.1;
-            score += 10;
+            if (item.getItemType() == ItemType.Peripherals)
+            {
+                itemPercentage += 11.1;
+                score += 10;
+            }
+            else if (item.getItemType() == ItemType.Components)
+            {
+                itemPercentage += 11.1;
+                score += 11;
+            }
+            else if (item.getItemType() == ItemType.Accessories)
+            {
+                itemPercentage += 11.1;
+                score += 5;
+            }
         }
-        else if (item.getItemType() == ItemType.Components)
-        {
-            itemPercentage += 11.1;
-            score += 11;
-        }
-        else if (item.getItemType() == ItemType.Accessories)
-        {
-            itemPercentage += 11.1;
-            score += 5;
-        }
+
     }
 }

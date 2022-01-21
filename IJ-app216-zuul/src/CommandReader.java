@@ -20,8 +20,7 @@ import java.util.ArrayList;
 public class CommandReader 
 {
     private Game game;
-    private Scanner reader; // source of command input
-    public Boolean gameOver;
+    private Scanner reader;
 
     public String commandWord = null;
     public String word2 = null;
@@ -101,10 +100,8 @@ public class CommandReader
         }
         else if(commandWord.equals(CommandWords.QUIT.word))
         {
-            return true;  // game over
+            return true;
         }
-
-        // Return false means the game is not over
         return false;
     }
 }

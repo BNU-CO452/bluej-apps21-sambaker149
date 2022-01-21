@@ -13,7 +13,7 @@ public class Item
         setValue(0);
     }
 
-    public String getName()
+    public String getItemName()
     {
         return itemName;
     }
@@ -28,9 +28,9 @@ public class Item
         this.itemType = itemType;
     }
 
-    public void setItemName(String name)
+    public void setItemName(String itemName)
     {
-        this.itemName = name;
+        this.itemName = itemName;
     }
 
     public int getValue()

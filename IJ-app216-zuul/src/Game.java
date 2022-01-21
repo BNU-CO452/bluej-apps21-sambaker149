@@ -44,15 +44,12 @@ public class Game
         printWelcome();
         gameOver = false;
 
-        // Enter the main command loop.  Here we repeatedly
-        // read commands and execute them until the game is over.
-
         while (! gameOver)
         {
             gameOver = reader.getCommand();
         }
 
-        System.out.println("Thank you for playing.  Goodbye.");
+        System.out.println("Thankyou for playing. Goodbye.");
     }
 
     /**
@@ -62,7 +59,7 @@ public class Game
     {
         System.out.print(ConsoleColours.ANSI_BG_BLACK);
         System.out.print(ConsoleColours.ANSI_CYAN);
-        System.out.println(" Welcome to the PC Maze!");
+        System.out.println(" Welcome to the PC Store Maze!");
         System.out.println(" The aim of this game is to find");
         System.out.println(" the parts needed to build a PC within");
         System.out.println(" this disjointed tech store. GOOD LUCK!");

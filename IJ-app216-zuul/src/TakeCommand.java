@@ -5,7 +5,7 @@
  * else
  *
  * @author Derek Peacock & Nicholas Day
- * @version 19/01/2022
+ * @version 20/01/2022
  * @modified Samuel Baker
  */
 public class TakeCommand extends ZuulCommand
@@ -27,18 +27,19 @@ public class TakeCommand extends ZuulCommand
 
     public void execute()
     {
-        if(item == null)
+        Map map = zuul.MAP;
+        if (this.itemName.isEmpty())
         {
             System.out.println("Take what?");
-            return;
         }
-
-        Map map = zuul.MAP;
-        map.getCurrentLocation().remove(this.itemName);
-        zuul.Player.addItem(item);
-        System.out.println("You have picked up " + item);
-        System.out.println();
-        System.out.println("Your score is " + score);
-        System.out.println("Your progress is " + itemPercentage);
+        else
+        {
+            Item item = map.getCurrentLocation().remove(itemName);
+            zuul.Player.addItem(item);
+            System.out.println("You have picked up " + item.getItemName());
+            System.out.println();
+            System.out.println("Your score is " + score);
+            System.out.println("Your progress is " + itemPercentage);
+        }
     }
 }

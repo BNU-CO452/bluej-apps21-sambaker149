@@ -6,11 +6,11 @@ import java.util.Iterator;
 /**
  * Class Location - a location on the map of an adventure game.
  *
- * This class is part of the "World of Zuul" application. 
- * "World of Zuul" is a very simple, text based adventure game.  
+ * This class is part of the "World of Zuul" application.
+ * "World of Zuul" is a very simple, text based adventure game.
  *
- * A "Location" represents one place in the scenery of the game.  It is 
- * connected to other locations via exits.  For each existing exit, the 
+ * A "Location" represents one place in the scenery of the game.  It is
+ * connected to other locations via exits.  For each existing exit, the
  * location stores a reference to the neighboring locations.
  *
  * @author  Michael Kölling and David J. Barnes
@@ -20,13 +20,13 @@ import java.util.Iterator;
 
 public class Location
 {
-    public String description;
+    private String description;
 
-    public Item item;
+    private Item item;
 
-    public ArrayList<Item> items;
+    private ArrayList<Item> items;
 
-    public HashMap<String, Location> exits;
+    private HashMap<String, Location> exits;
 
     /**
      * Create a location described "description". Initially, it has
@@ -71,7 +71,7 @@ public class Location
 
         if(item != null)
         {
-            output = output.concat("\n Items include: " + item.getName());
+            output = output.concat("\n Items include: " + item.getItemName());
         }
         return output;
     }
@@ -113,7 +113,7 @@ public class Location
     {
         Item oldItem = item;
 
-        if(this.item.getName().equals(itemName))
+        if(this.item.getItemName().equals(itemName))
         {
             item = null;
             return oldItem;
