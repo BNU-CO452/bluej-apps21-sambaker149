@@ -71,11 +71,6 @@ public class CommandReader
             TakeCommand take = new TakeCommand(game, word2);
             take.execute();
         }
-        else if(commandWord.equals(CommandWords.ITEMS.word))
-        {
-            ItemsCommand items = new ItemsCommand(game);
-            items.execute();
-        }
         else if(commandWord.equals(CommandWords.SCORE.word))
         {
             ScoreCommand score = new ScoreCommand(game);

@@ -111,7 +111,8 @@ public class Location
 
         if(this.item.getItemName().equals(itemName))
         {
-            this.item = oldItem;
+            items.remove(item);
+            item = null;
             return oldItem;
         }
         else

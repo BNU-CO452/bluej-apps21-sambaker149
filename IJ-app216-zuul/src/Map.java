@@ -130,9 +130,6 @@ public class Map
 
         Item cpu = new Item(ItemType.components, "cpu");
         aisle1.addItem(cpu);
-
-        Item ssd = new Item(ItemType.components, "ssd");
-        aisle1.addItem(ssd);
     }
     /**
      * Create aisle 2 linked to the internal components section
@@ -188,9 +185,6 @@ public class Map
 
         Item keyboard = new Item(ItemType.peripherals, "keyboard");
         aisle5.addItem(keyboard);
-
-        Item monitor = new Item(ItemType.peripherals, "monitor");
-        aisle5.addItem(monitor);
     }
 
     /**
@@ -202,6 +196,9 @@ public class Map
 
         miscellaneous.setExit("north", aisle6);
         aisle6.setExit("south", miscellaneous);
+
+        Item monitor = new Item(ItemType.peripherals, "monitor");
+        aisle6.addItem(monitor);
     }
 
     /**

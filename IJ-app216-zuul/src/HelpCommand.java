@@ -3,7 +3,7 @@
  * zuul game
  *
  * @author Samuel Baker
- * @version 18/01/2022
+ * @version 20/01/2022
  */
 public class HelpCommand extends ZuulCommand
 {
@@ -13,9 +13,8 @@ public class HelpCommand extends ZuulCommand
     }
 
     /**
-     * Print out some help information.
-     * Here we print some stupid, cryptic message and
-     * a list of the command words.
+     * Print out some help information including the
+     * aim of the game and a list of the command words.
      */
     public void execute()
     {

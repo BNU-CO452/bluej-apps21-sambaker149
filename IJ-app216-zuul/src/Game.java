@@ -20,6 +20,7 @@ public class Game
 {
     public final Map MAP;
     public Player Player;
+
     private CommandReader reader;
     private boolean gameOver;
 

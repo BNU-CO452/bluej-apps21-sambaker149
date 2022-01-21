@@ -1,5 +1,5 @@
 /**
- * This command prints the score and progress of the player
+ * This command displays the score and progress of the player
  *
  * @author Samuel Baker
  * @version 19/01/2022

@@ -10,6 +10,11 @@ public class RestartCommand extends ZuulCommand
     {
         super(zuul);
     }
+
+    /**
+     * Print out some help information including the
+     * aim of the game and a list of the command words.
+     */
     public void execute()
     {
         Game zuul = new Game();

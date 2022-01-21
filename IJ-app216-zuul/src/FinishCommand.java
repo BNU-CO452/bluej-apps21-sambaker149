@@ -7,10 +7,10 @@
  * */
 public class FinishCommand extends ZuulCommand
 {
-    public Boolean gameOver;
-    public int score;
-    public int itemPercentage;
-    public int lives;
+    Boolean gameOver;
+    int score;
+    int itemPercentage;
+    int lives;
     public FinishCommand(Game zuul)
     {
         super(zuul);
@@ -28,7 +28,7 @@ public class FinishCommand extends ZuulCommand
             lives -= 1;
             gameOver = true;
         }
-        else if(score >= 75)
+        else
         {
             System.out.print(ConsoleColours.ANSI_BRIGHT_BG_GREEN);
             System.out.print(ConsoleColours.ANSI_BLACK);

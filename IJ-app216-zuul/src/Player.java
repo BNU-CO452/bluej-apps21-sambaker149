@@ -36,7 +36,7 @@ public class Player
             itemPercentage = 100;
     }
 
-    public void decreaseEnergy(int amount)
+    public void decreaseItemPercentage(int amount)
     {
         itemPercentage -= amount;
         if(itemPercentage < 10)
@@ -45,6 +45,15 @@ public class Player
         }
     }
 
+    public void increaseScore(int amount)
+    {
+        score += amount;
+    }
+
+    public void decreaseScore(int amount)
+    {
+        score -= amount;
+    }
     public boolean isAlive()
     {
         return lives > 0;
@@ -65,18 +74,18 @@ public class Player
 
             if(item.getItemType() == ItemType.peripherals)
             {
-                itemPercentage += 11.1;
-                score += 10;
+                increaseItemPercentage(13);
+                increaseScore(10);
             }
             else if(item.getItemType() == ItemType.components)
             {
-                itemPercentage += 11.1;
-                score += 11;
+                increaseItemPercentage(15);
+                increaseScore(12);
             }
             else if(item.getItemType() == ItemType.accessories)
             {
-                itemPercentage += 11.1;
-                score += 5;
+                increaseItemPercentage(12);
+                increaseScore(4);
             }
         }
     }
