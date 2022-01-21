@@ -9,7 +9,6 @@
 public class GoCommand extends ZuulCommand
 {
     String direction;
-    
     public GoCommand(Game zuul, String direction)
     {
         super(zuul);

@@ -9,11 +9,9 @@ import java.util.ArrayList;
 public class ItemsCommand extends ZuulCommand
 {
     public ArrayList<Item> items;
-
     public ItemsCommand(Game zuul)
     {
         super(zuul);
-        Item items;
     }
     public void execute()
     {

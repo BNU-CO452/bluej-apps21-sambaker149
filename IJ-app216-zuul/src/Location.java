@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashMap;
-import java.util.Iterator;
 
 /**
  * Class Location - a location on the map of an adventure game.
@@ -21,11 +20,8 @@ import java.util.Iterator;
 public class Location
 {
     private String description;
-
     private Item item;
-
     private ArrayList<Item> items;
-
     private HashMap<String, Location> exits;
 
     /**
@@ -111,11 +107,11 @@ public class Location
 
     public Item remove(String itemName)
     {
-        Item oldItem = item;
+        Item oldItem = this.item;
 
         if(this.item.getItemName().equals(itemName))
         {
-            item = null;
+            this.item = oldItem;
             return oldItem;
         }
         else

@@ -17,7 +17,7 @@ public class Player
 
     public int score = 0;
 
-    private ArrayList<Item> items;
+    public ArrayList<Item> items;
 
     public int itemPercentage;
 
@@ -63,22 +63,21 @@ public class Player
         {
             this.item = item;
 
-            if (item.getItemType() == ItemType.Peripherals)
+            if(item.getItemType() == ItemType.peripherals)
             {
                 itemPercentage += 11.1;
                 score += 10;
             }
-            else if (item.getItemType() == ItemType.Components)
+            else if(item.getItemType() == ItemType.components)
             {
                 itemPercentage += 11.1;
                 score += 11;
             }
-            else if (item.getItemType() == ItemType.Accessories)
+            else if(item.getItemType() == ItemType.accessories)
             {
                 itemPercentage += 11.1;
                 score += 5;
             }
         }
-
     }
 }

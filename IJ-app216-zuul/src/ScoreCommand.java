@@ -6,8 +6,8 @@
  * */
 public class ScoreCommand extends ZuulCommand
 {
-    public int score;
-    public int itemPercentage;
+    int score;
+    int itemPercentage;
     public ScoreCommand(Game zuul)
     {
         super(zuul);

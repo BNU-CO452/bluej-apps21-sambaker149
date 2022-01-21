@@ -1,15 +1,12 @@
 public class Item
 {
     private ItemType itemType;
-
     private String itemName;
-
     private int value;
-
-    public Item(ItemType type, String name)
+    public Item(ItemType type, String itemName)
     {
         this.setItemType(type);
-        this.setItemName(name);
+        this.setItemName(itemName);
         setValue(0);
     }
 

@@ -11,7 +11,6 @@ public class FinishCommand extends ZuulCommand
     public int score;
     public int itemPercentage;
     public int lives;
-
     public FinishCommand(Game zuul)
     {
         super(zuul);

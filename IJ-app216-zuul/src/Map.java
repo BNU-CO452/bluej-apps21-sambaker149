@@ -59,7 +59,7 @@ public class Map
         createStaffArea2();
         createStaffArea3();
 
-        currentLocation = outside;  // start game outside
+        currentLocation = outside;
     }
     
     /**
@@ -90,9 +90,6 @@ public class Map
      */
     private void createInternalComponents()
     {
-        System.out.print(ConsoleColours.ANSI_BG_CYAN);
-        System.out.print(ConsoleColours.ANSI_BLACK);
-
         internalComponents = new Location("in the Internal Components Section");
 
         storeEntrance.setExit("west", internalComponents);
@@ -131,10 +128,10 @@ public class Map
         internalComponents.setExit("west", aisle1);
         aisle1.setExit("east", internalComponents);
 
-        Item cpu = new Item(ItemType.Components, "CPU");
+        Item cpu = new Item(ItemType.components, "cpu");
         aisle1.addItem(cpu);
 
-        Item ssd = new Item(ItemType.Components, "SSD");
+        Item ssd = new Item(ItemType.components, "ssd");
         aisle1.addItem(ssd);
     }
     /**
@@ -147,7 +144,7 @@ public class Map
         internalComponents.setExit("north", aisle2);
         aisle2.setExit("south", internalComponents);
 
-        Item graphicsCard = new Item(ItemType.Components, "Graphics Card");
+        Item graphicsCard = new Item(ItemType.components, "graphics-card");
         aisle2.addItem(graphicsCard);
     }
 
@@ -161,7 +158,7 @@ public class Map
         aisle2.setExit("west", aisle3);
         aisle3.setExit("east", aisle2);
 
-        Item wifiCard = new Item(ItemType.Components, "WiFi Card");
+        Item wifiCard = new Item(ItemType.components, "wifi-card");
         aisle3.addItem(wifiCard);
     }
 
@@ -175,7 +172,7 @@ public class Map
         aisle4.setExit("east", accessories);
         accessories.setExit("west", aisle4);
 
-        Item mouse = new Item(ItemType.Peripherals, "Mouse");
+        Item mouse = new Item(ItemType.peripherals, "mouse");
         aisle4.addItem(mouse);
     }
 
@@ -189,10 +186,10 @@ public class Map
         aisle5.setExit("south", accessories);
         accessories.setExit("north", aisle5);
 
-        Item keyboard = new Item(ItemType.Peripherals, "Keyboard");
+        Item keyboard = new Item(ItemType.peripherals, "keyboard");
         aisle5.addItem(keyboard);
 
-        Item monitor = new Item(ItemType.Peripherals, "Monitor");
+        Item monitor = new Item(ItemType.peripherals, "monitor");
         aisle5.addItem(monitor);
     }
 
@@ -217,7 +214,7 @@ public class Map
         aisle6.setExit("east", aisle7);
         aisle7.setExit("west", aisle6);
 
-        Item pcCase = new Item(ItemType.Components, "PC Case");
+        Item pcCase = new Item(ItemType.components, "pc-case");
         aisle7.addItem(pcCase);
     }
 
@@ -231,7 +228,7 @@ public class Map
         miscellaneous.setExit("east", aisle8);
         aisle8.setExit("west", miscellaneous);
 
-        Item hdmiCable = new Item(ItemType.Accessories, "HDMI Cable");
+        Item hdmiCable = new Item(ItemType.accessories, "hdmi-cable");
         aisle8.addItem(hdmiCable);
     }
 
