@@ -28,7 +28,7 @@ public class TakeCommand extends ZuulCommand
     public void execute()
     {
         Map map = zuul.MAP;
-        if (this.itemName.isEmpty())
+        if (item == null)
         {
             System.out.println("Take what?");
         }
