@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * has picked up
  *
  * @author Samuel Baker
- * @version 18/01/2022
+ * @version 24/01/2022
  */
 public class Player
 {
@@ -64,29 +64,22 @@ public class Player
      */
     public void addItem(Item item)
     {
-        if(item == null)
+        this.item = item;
+        if(item.getItemType() == ItemType.peripherals)
         {
-            System.out.println("Take what?");
+            increaseItemPercentage(13);
+            increaseScore(10);
         }
-        else
+        else if(item.getItemType() == ItemType.components)
         {
-            this.item = item;
+            increaseItemPercentage(15);
+            increaseScore(12);
+        }
+        else if(item.getItemType() == ItemType.accessories)
+        {
+            increaseItemPercentage(12);
+            increaseScore(4);
+        }
 
-            if(item.getItemType() == ItemType.peripherals)
-            {
-                increaseItemPercentage(13);
-                increaseScore(10);
-            }
-            else if(item.getItemType() == ItemType.components)
-            {
-                increaseItemPercentage(15);
-                increaseScore(12);
-            }
-            else if(item.getItemType() == ItemType.accessories)
-            {
-                increaseItemPercentage(12);
-                increaseScore(4);
-            }
-        }
     }
 }

@@ -3,7 +3,7 @@
  * zuul game
  *
  * @author Samuel Baker
- * @version 20/01/2022
+ * @version 24/01/2022
  */
 public class HelpCommand extends ZuulCommand
 {
@@ -27,7 +27,8 @@ public class HelpCommand extends ZuulCommand
         System.out.println(" Your task is to go around the store and try to");
         System.out.println(" the parts you need.");
         System.out.println();
-        System.out.println(" Without all the items you need, you can't win");
+        System.out.println(" You need to gain a score of at least 55 to win the");
+        System.out.println(" game. Without the items you need, you can't win");
         System.out.println(" the game. GOOD LUCK!");
         System.out.println();
         System.out.println(" Your command words are:");

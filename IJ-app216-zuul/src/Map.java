@@ -14,17 +14,16 @@
  *                                            [Outside]                                      [Staff Area]
  *             
  * @author Derek Peacock and Nicholas Day
- * @version 18/01/2022
+ * @version 24/01/2022
  * @modified Samuel Baker
  */
 public class Map
 {
-    // Need to add a list of exits
-    
     private Location outside, storeEntrance, internalComponents, accessories, miscellaneous, aisle1, aisle2, aisle3, aisle4,
             aisle5, aisle6, aisle7, aisle8, staff1, staff2, staff3;
 
     public Location currentLocation;
+    boolean gameOver;
 
     /**
      * Constructor for objects of class Map
@@ -237,6 +236,8 @@ public class Map
         staff1 = new Location("in the Staff Area - GAME OVER");
 
         aisle3.setExit("north", staff1);
+
+        gameOver = true;
     }
 
     /**
@@ -249,6 +250,8 @@ public class Map
         aisle6.setExit("north", staff2);
 
         accessories.setExit("east", staff2);
+
+        gameOver = true;
     }
 
     /**
@@ -259,6 +262,8 @@ public class Map
         staff3 = new Location("in the Staff Area - GAME OVER");
 
         aisle8.setExit("south", staff3);
+
+        gameOver = true;
     }
     
     public Location getCurrentLocation()

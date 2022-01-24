@@ -38,8 +38,8 @@ public class TakeCommand extends ZuulCommand
             zuul.Player.addItem(item);
             System.out.println(" You have picked up " + item.getItemName());
             System.out.println();
-            System.out.println(" Your score is " + score);
-            System.out.println(" Your progress is " + itemPercentage + "%");
+            System.out.println(" Your score is " + zuul.Player.score);
+            System.out.println(" Your progress is " + zuul.Player.itemPercentage + "%");
             System.out.println();
             System.out.println(map.getCurrentLocation().getLongDescription());
         }
